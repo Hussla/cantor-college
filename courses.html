@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantor College Courses</title>
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="styles/desktop.css">
+</head>
+<body>
+    <header role="banner">
+        <nav>
+            <div class="logo">
+                <h1>Cantor College</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="resources.html">Learning Resources</a></li>
+                <li><a href="staff-info.html">Staff</a></li>
+                <li><a href="student-info.html">Students</a></li>
+                <li><a href="business.html">Working with Business</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="courses" class="courses">
+        <h2>Our Courses</h2>
+        <div class="courses-list" id="courses-list">
+        </div>
+    </section>
+
+    <footer>
+        <p>2024 Cantor College. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const coursesData = [
+            {
+                title: "Computing",
+                type: "Undergraduate",
+                summary: "Learn how to code, configure and integrate applications, databases, and networks.",
+                award: "BSc (Honours)",
+                ucasCode: "G504",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Computing",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Computer Networks",
+                type: "Undergraduate",
+                summary: "This course includes general computing skills in programming, databases, and networking.",
+                award: "BSc (Honours)",
+                ucasCode: "G420",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Computing",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Cyber Security with Forensics",
+                type: "Undergraduate",
+                summary: "Prepare for a career in cyber security by designing security solutions and learning forensic investigation techniques.",
+                award: "BSc (Honours)",
+                ucasCode: "F4G4",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Computing",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Computer Science for Games",
+                type: "Undergraduate",
+                summary: "Create the software powering the next generation of blockbusters by studying game programming.",
+                award: "BSc (Honours)",
+                ucasCode: "G611",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Computing",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Software Engineering",
+                type: "Undergraduate",
+                summary: "Gain experience in the whole software development process, including requirements gathering, design, coding, and testing.",
+                award: "BEng (Honours)",
+                ucasCode: "G600",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Computing",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Computer Science",
+                type: "Undergraduate",
+                summary: "Gain a solid foundation in the core areas of computer science, including programming, algorithms, and systems.",
+                award: "BSc (Honours)",
+                ucasCode: "G400",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Computing",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Computing with Foundation Year",
+                type: "Undergraduate",
+                summary: "Gain a degree in computing with an initial foundation year to build skills and knowledge for advanced study.",
+                award: "BSc (Honours)",
+                ucasCode: "A020",
+                ucasPoints: 80,
+                modeOfAttendance: "Full-time",
+                studyLength: "4 / 5 Years",
+                hasFoundationYear: true,
+                courseSubject: "Computing",
+                noLongerRecruiting: true
+            },
+            {
+                title: "Cyber Security with Forensics with Foundation Year",
+                type: "Undergraduate",
+                summary: "Gain a degree in cyber security with forensics, with an initial foundation year to build essential skills.",
+                award: "BSc (Honours)",
+                ucasCode: "A023",
+                ucasPoints: 80,
+                modeOfAttendance: "Full-time",
+                studyLength: "4 / 5 Years",
+                hasFoundationYear: true,
+                courseSubject: "Computing",
+                noLongerRecruiting: true
+            },
+            {
+                title: "Software Engineering with Foundation Year",
+                type: "Undergraduate",
+                summary: "Gain a degree in software engineering, with an initial foundation year to develop core skills and knowledge.",
+                award: "BEng (Honours)",
+                ucasCode: "A017",
+                ucasPoints: 80,
+                modeOfAttendance: "Full-time",
+                studyLength: "4 / 5 Years",
+                hasFoundationYear: true,
+                courseSubject: "Computing",
+                noLongerRecruiting: true
+            },
+            {
+                title: "Cyber Security with Foundation Year",
+                type: "Undergraduate",
+                summary: "Gain a degree in cyber security with an initial foundation year to build essential skills for success.",
+                award: "BSc (Honours)",
+                ucasCode: "A093",
+                ucasPoints: 80,
+                modeOfAttendance: "Full-time",
+                studyLength: "4 / 5 Years",
+                hasFoundationYear: true,
+                courseSubject: "Computing",
+                noLongerRecruiting: true
+            },
+            {
+                title: "Information Technology with Business Studies",
+                type: "Undergraduate",
+                summary: "Gain a degree in information technology with business studies to understand the role of IT in business environments.",
+                award: "BSc (Honours)",
+                ucasCode: "A019",
+                ucasPoints: 80,
+                modeOfAttendance: "Full-time",
+                studyLength: "4 / 5 Years",
+                hasFoundationYear: true,
+                courseSubject: "Computing",
+                noLongerRecruiting: true
+            },
+            {
+                title: "Computer Science with Foundation Year",
+                type: "Undergraduate",
+                summary: "Gain a degree in computer science with an initial foundation year to build the core skills needed for advanced study.",
+                award: "BSc (Honours)",
+                ucasCode: "A022",
+                ucasPoints: 80,
+                modeOfAttendance: "Full-time",
+                studyLength: "4 / 5 Years",
+                hasFoundationYear: true,
+                courseSubject: "Computing",
+                noLongerRecruiting: true
+            },
+            {
+                title: "Computer Science for Games with Foundation Year",
+                type: "Undergraduate",
+                summary: "Gain a degree in computer science for games, with an initial foundation year to develop key skills for the gaming industry.",
+                award: "BSc (Honours)",
+                ucasCode: "A092",
+                ucasPoints: 80,
+                modeOfAttendance: "Full-time",
+                studyLength: "4 / 5 Years",
+                hasFoundationYear: true,
+                courseSubject: "Computing",
+                noLongerRecruiting: true
+            },
+            {
+                title: "Business and Digital Technology with Foundation Year",
+                type: "Undergraduate",
+                summary: "Gain a degree in business and digital communications technology, with an initial foundation year to develop core skills.",
+                award: "BSc (Honours)",
+                ucasCode: "A018",
+                ucasPoints: 80,
+                modeOfAttendance: "Full-time",
+                studyLength: "4 / 5 Years",
+                hasFoundationYear: true,
+                courseSubject: "Computing",
+                noLongerRecruiting: true
+            },
+            {
+                title: "Computing",
+                type: "Postgraduate",
+                summary: "A course enhanced by real-life project experience for non-computing graduates to develop skills in computing.",
+                award: "MSc",
+                ucasCode: "-",
+                ucasPoints: "-",
+                modeOfAttendance: "Part-time",
+                studyLength: "3 Years",
+                hasFoundationYear: false,
+                courseSubject: "Computing",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Computing and Informatics",
+                type: "Postgraduate",
+                summary: "Conduct a period of intensive, supervised study where you explore an area of computing and informatics in depth.",
+                award: "MPhil",
+                ucasCode: "-",
+                ucasPoints: "-",
+                modeOfAttendance: "Part-time",
+                studyLength: "3 Years",
+                hasFoundationYear: false,
+                courseSubject: "Computing",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Cyber Security",
+                type: "Postgraduate",
+                summary: "Develop your skills and academic knowledge in the growing area of cyber security.",
+                award: "MSc",
+                ucasCode: "-",
+                ucasPoints: "-",
+                modeOfAttendance: "Full-time",
+                studyLength: "1 Year",
+                hasFoundationYear: false,
+                courseSubject: "Computing",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Graphic Design",
+                type: "Undergraduate",
+                summary: "Develop your own creative and innovative approach to graphic design.",
+                award: "BA (Honours)",
+                ucasCode: "W210",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Art and design",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Interior Architecture and Design",
+                type: "Undergraduate",
+                summary: "Develop your own creative and sustainable approach to interior architecture and design.",
+                award: "BA (Honours)",
+                ucasCode: "W250",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Art and design",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Jewellery, Materials and Design",
+                type: "Undergraduate",
+                summary: "Develop your own creative and innovative approach to jewellery, materials, and design.",
+                award: "BA (Honours)",
+                ucasCode: "W721",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Art and design",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Game Design and Development",
+                type: "Undergraduate",
+                summary: "Study a course with a distinctive, practice-based approach that emphasizes creativity and technical skills.",
+                award: "BA (Honours)",
+                ucasCode: "A112",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Art and design",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Product Design",
+                type: "Undergraduate",
+                summary: "Develop a highly creative approach to producing innovative products through real-life projects.",
+                award: "BSc (Honours)",
+                ucasCode: "D009",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Art and design",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Product Design",
+                type: "Undergraduate",
+                summary: "Develop a creative and innovative approach to product design through real-life projects.",
+                award: "BA (Honours)",
+                ucasCode: "W240",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Art and design",
+                noLongerRecruiting: false
+            },
+            {
+                title: "Digital Media Production",
+                type: "Undergraduate",
+                summary: "Design and produce new media products in film, animation, and interactive media.",
+                award: "BA (Honours)",
+                ucasCode: "W212",
+                ucasPoints: 112,
+                modeOfAttendance: "Full-time",
+                studyLength: "3 / 4 Years",
+                hasFoundationYear: false,
+                courseSubject: "Art and design",
+                noLongerRecruiting: false
+            }
+        ];
+
+        const coursesList = document.getElementById('courses-list');
+
+        coursesData.forEach(course => {
+            const courseItem = document.createElement('div');
+            courseItem.classList.add('course-item');
+
+            courseItem.innerHTML = `
+                <h3>${course.title}</h3>
+                <p>${course.type} - ${course.summary}</p>
+                <p><strong>Award:</strong> ${course.award}</p>
+                <p><strong>UCAS Code:</strong> ${course.ucasCode}</p>
+                <p><strong>UCAS Points:</strong> ${course.ucasPoints}</p>
+                <p><strong>Mode of Attendance:</strong> ${course.modeOfAttendance}</p>
+                <p><strong>Study Length:</strong> ${course.studyLength}</p>
+                <p><strong>Has Foundation Year:</strong> ${course.hasFoundationYear ? "Yes" : "No"}</p>
+                <p><strong>Course Subject:</strong> ${course.courseSubject}</p>
+                <p><strong>No Longer Recruiting:</strong> ${course.noLongerRecruiting ? "Yes" : "No"}</p>
+            `;
+
+            coursesList.appendChild(courseItem);
+        });
+    </script>
+</body>
+</html>
+
+
+
