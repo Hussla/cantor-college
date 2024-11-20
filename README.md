@@ -1,15 +1,26 @@
 # Cantor College Website
 
 ## Description
-This repository contains the source code for the Cantor College website. The website provides information about the college, including courses, facilities, staff, and student resources.
+This repository contains the source code for the Cantor College website, a comprehensive online resource designed to provide prospective and current students, as well as faculty and staff, with detailed information about Cantor College. The website includes various sections that cover different aspects of the college:
+
+- **Home Page (index.html)**: An overview of Cantor College, including its mission, vision, and key features.
+- **Courses (courses.html)**: Information about the academic programs and courses offered at Cantor College.
+- **Facilities (facilities.html)**: Details about the college's facilities, such as lecture theatres, computing labs, and other resources.
+- **Business (business.html)**: Information for businesses and industry partners, including collaboration opportunities and partnerships.
+- **Staff Info (staff-info.html)**: Profiles and contact information for the college's faculty and staff.
+- **Student Info (student-info.html)**: Resources and information specifically for students, including admission procedures, student life, and support services.
+- **Resources (resources.html)**: Links to additional resources, such as academic journals, online courses, and other educational materials.
+- **Contact Us (contact-us.html)**: Contact information and a form for visitors to get in touch with Cantor College.
+
+The website is built using modern web technologies to ensure a responsive and user-friendly experience across different devices.
 
 ## Technologies Used
-- HTML
-- CSS
-- JavaScript
-- ReactJS
-- NodeJS
-- NextJS
+- **HTML**: For structuring the content of the website.
+- **CSS**: For styling the website, with separate stylesheets for desktop and mobile views.
+- **JavaScript**: For adding interactivity to the website.
+- **ReactJS**: A JavaScript library for building user interfaces, which helps in creating reusable components.
+- **NodeJS**: A runtime environment for executing JavaScript on the server side.
+- **NextJS**: A React framework that enables server-side rendering and static site generation, making the website fast and SEO-friendly.
 
 ## Project Structure
 ```
