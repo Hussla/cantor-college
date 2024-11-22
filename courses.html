@@ -11,7 +11,7 @@
     <header role="banner">
         <nav>
             <div class="logo">
-                <h1>Cantor College</h1>
+                <h1>Courses</h1>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -26,15 +26,28 @@
         </nav>
     </header>
     <section id="courses" class="courses">
-        <h2>Our Courses</h2>
-        <div class="courses-list" id="courses-list">
-        </div>
+        <h2>Course List :</h2>
+        <table id="courses-table" class="courses-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Summary</th>
+                    <th>Award</th>
+                    <th>UCAS Code</th>
+                    <th>UCAS Points</th>
+                    <th>Mode of Attendance</th>
+                    <th>Study Length</th>
+                    <th>Has Foundation Year</th>
+                    <th>Course Subject</th>
+                    <th>No Longer Recruiting</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Courses will be inserted here by JavaScript -->
+            </tbody>
+        </table>
     </section>
-
-    <footer>
-        <p>2024 Cantor College. All rights reserved.</p>
-    </footer>
-
     <script>
         const coursesData = [
             {
@@ -351,30 +364,26 @@
             }
         ];
 
-        const coursesList = document.getElementById('courses-list');
+        const coursesTableBody = document.getElementById('courses-table').getElementsByTagName('tbody')[0];
 
         coursesData.forEach(course => {
-            const courseItem = document.createElement('div');
-            courseItem.classList.add('course-item');
+            const row = coursesTableBody.insertRow();
 
-            courseItem.innerHTML = `
-                <h3>${course.title}</h3>
-                <p>${course.type} - ${course.summary}</p>
-                <p><strong>Award:</strong> ${course.award}</p>
-                <p><strong>UCAS Code:</strong> ${course.ucasCode}</p>
-                <p><strong>UCAS Points:</strong> ${course.ucasPoints}</p>
-                <p><strong>Mode of Attendance:</strong> ${course.modeOfAttendance}</p>
-                <p><strong>Study Length:</strong> ${course.studyLength}</p>
-                <p><strong>Has Foundation Year:</strong> ${course.hasFoundationYear ? "Yes" : "No"}</p>
-                <p><strong>Course Subject:</strong> ${course.courseSubject}</p>
-                <p><strong>No Longer Recruiting:</strong> ${course.noLongerRecruiting ? "Yes" : "No"}</p>
-            `;
-
-            coursesList.appendChild(courseItem);
+            row.insertCell(0).textContent = course.title;
+            row.insertCell(1).textContent = course.type;
+            row.insertCell(2).textContent = course.summary;
+            row.insertCell(3).textContent = course.award;
+            row.insertCell(4).textContent = course.ucasCode;
+            row.insertCell(5).textContent = course.ucasPoints;
+            row.insertCell(6).textContent = course.modeOfAttendance;
+            row.insertCell(7).textContent = course.studyLength;
+            row.insertCell(8).textContent = course.hasFoundationYear ? "Yes" : "No";
+            row.insertCell(9).textContent = course.courseSubject;
+            row.insertCell(10).textContent = course.noLongerRecruiting ? "Yes" : "No";
         });
     </script>
+    <footer>
+        <p>2024 Cantor College. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
-
-
