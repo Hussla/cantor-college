@@ -49,7 +49,8 @@ h1, h2, h3 {
     flex-direction: column; /* Display links in a row for mobile dropdown */
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4; /* Optional: Add a background to the dropdown */
+    color: #fff;
+    background-color: #002147; /* Optional: Add a background to the dropdown */
     padding: 10px;
     position: absolute;
     top: 60px; /* Adjust this based on the header height */
@@ -58,6 +59,8 @@ h1, h2, h3 {
     width: 100%; /* Ensure it covers the full width */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 10;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
 }
 
 /* When the navigation is toggled on */
@@ -71,7 +74,7 @@ h1, h2, h3 {
 
 .nav-links a {
     text-decoration: none;
-    color: #00539C;
+    color: #fff;
     padding: 10px;
     display: block;
 }
