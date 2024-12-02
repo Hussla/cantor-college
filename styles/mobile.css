@@ -141,6 +141,35 @@ h1, h2, h3 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+.courses-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.courses-table th, .courses-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.courses-table th {
+    background-color: #00539C;
+    color: #fff;
+    border-color: #ddd;
+}
+
+.courses-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.courses-table tr:hover {
+    background-color: #ddd;
+}
+
 /* Admissions Section */
 .admissions {
     padding: 20px;
