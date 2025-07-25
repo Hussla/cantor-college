@@ -3,51 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Information for Staff</title>
+    <meta name="description" content="Staff resources and services at Cantor College including academic registry, financial services, IT support, professional development, and HR assistance for faculty and staff members.">
+    <title>Information for Staff | Cantor College</title>
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/desktop.css">
-    
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <div class="logo">
                 <img src="website-images-assets/resized-logo.png" alt="Cantor College Logo">
             </div>
-                <h1>Information for Staff</h1>
+            <div id="burger-menu">
+                <button id="burger-button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-                <li><a href="resources.html">Learning Resources</a></li>
-                <li><a href="staff-info.html">Staff</a></li>
-                <li><a href="student-info.html">Students</a></li>
-                <li><a href="business.html">Working with Business</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="courses.html" role="menuitem">Courses</a></li>
+                <li role="none"><a href="facilities.html" role="menuitem">Facilities</a></li>
+                <li role="none"><a href="resources.html" role="menuitem">Learning Resources</a></li>
+                <li role="none"><a href="staff-info.html" role="menuitem" aria-current="page">Staff</a></li>
+                <li role="none"><a href="student-info.html" role="menuitem">Students</a></li>
+                <li role="none"><a href="business.html" role="menuitem">Working with Business</a></li>
+                <li role="none"><a href="contact-us.html" role="menuitem">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    <section id="staff-info" class="staff-info">
-        <div class="staff-info">
-            <h2>News:</h2>
-            <p>
-                Cantor College recently hosted the Software Engineering student of the year awards. Short-listed candidates from around the country attended the one-day event.
-            </p>
-            <ul>
-                <li>For academic regulations, assessment, awards, student records, and course validation.</li>
-                <li>Catering Services: Contact the Catering Services regarding on and off-site catering.</li>
-                <li>Financial Services: The financial team based on the 2nd Floor is responsible for all areas of student finance as well as College budgeting.</li>
-                <li>Information Systems Services: The ISS team delivers the College’s computing facilities including all hardware and software. They also run the staff helpdesk.</li>
-                <li>Marketing Services: The Marketing Team will help promote events and new courses. They will help with press release preparation.</li>
-                <li>Personnel Services: All staff pay and conditions enquiries should be directed to the Personnel Services team on the 3rd floor.</li>
-                <li>Facilities: The facilities are responsible for the general care and maintenance of the College. All enquiries via the main helpdesk.</li>
-            </ul>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="website-images-assets/Cantor atrium 4.jpg" alt="Professional staff environment at Cantor College" class="hero-bg" width="800" height="300" loading="eager" decoding="async">
+        <div class="hero-content">
+            <h1>Information for Staff</h1>
+            <p>Supporting our dedicated faculty and staff with comprehensive resources and services</p>
         </div>
     </section>
+
+    <main>
+        <section class="staff-news">
+            <h2>Latest News</h2>
+            <div class="news-content">
+                <div class="news-image">
+                    <img src="website-images-assets/IMG_1005.jpeg" alt="Software Engineering awards ceremony" class="news-img">
+                </div>
+                <div class="news-text">
+                    <h3>Software Engineering Student Awards</h3>
+                    <p>
+                        Cantor College recently hosted the Software Engineering student of the year awards. Short-listed candidates from around the country attended the one-day event, showcasing exceptional talent and innovation in the field. The ceremony highlighted the outstanding achievements of our students and reinforced our commitment to excellence in computing education.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <h2>Staff Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="website-images-assets/IMG_1087.jpeg" alt="Academic registry services" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3>Academic Registry</h3>
+                        <p>For academic regulations, assessment, awards, student records, and course validation. Our registry team ensures all academic processes run smoothly and efficiently.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="website-images-assets/IMG_1089.jpeg" alt="Catering services facility" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3>Catering Services</h3>
+                        <p>Contact the Catering Services regarding on and off-site catering for events, meetings, and special occasions. Professional catering solutions for all your needs.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="website-images-assets/IMG_1099.jpeg" alt="Financial services office" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3>Financial Services</h3>
+                        <p>The financial team based on the 2nd Floor is responsible for all areas of student finance as well as College budgeting, ensuring fiscal responsibility and transparency.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="website-images-assets/DSCF5127.jpg" alt="Information systems and technology" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3>Information Systems Services</h3>
+                        <p>The ISS team delivers the College's computing facilities including all hardware and software. They also run the staff helpdesk for technical support.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="website-images-assets/IMG_1642.jpeg" alt="Marketing and communications" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3>Marketing Services</h3>
+                        <p>The Marketing Team will help promote events and new courses. They will help with press release preparation and brand management initiatives.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="website-images-assets/IMG_1808.jpeg" alt="Personnel and HR services" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3>Personnel Services</h3>
+                        <p>All staff pay and conditions enquiries should be directed to the Personnel Services team on the 3rd floor. HR support for all employment matters.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="website-images-assets/IMG_1809.jpeg" alt="Facilities management" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3>Facilities Management</h3>
+                        <p>The facilities team is responsible for the general care and maintenance of the College. All enquiries via the main helpdesk for prompt assistance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="staff-resources">
+            <h2>Staff Resources</h2>
+            <div class="resources-content">
+                <div class="resource-image">
+                    <img src="website-images-assets/CantorLectureTheatre5.JPG" alt="Professional development and training" class="resource-img">
+                </div>
+                <div class="resource-text">
+                    <h3>Professional Development</h3>
+                    <p>
+                        Cantor College is committed to supporting the professional growth of our staff. We offer various development opportunities including training workshops, conference attendance, research sabbaticals, and continuing education programs. Our goal is to ensure our faculty and staff remain at the forefront of their respective fields.
+                    </p>
+                    <ul>
+                        <li>Regular training workshops and seminars</li>
+                        <li>Conference and professional event support</li>
+                        <li>Research and sabbatical opportunities</li>
+                        <li>Continuing education funding</li>
+                        <li>Mentorship programs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <h2>Need Assistance?</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>Main Reception</h3>
+                    <p>For general enquiries and visitor assistance</p>
+                    <p><strong>Location:</strong> Ground Floor, Main Building</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Staff Helpdesk</h3>
+                    <p>For IT support and technical assistance</p>
+                    <p><strong>Extension:</strong> 2847</p>
+                </div>
+                <div class="contact-item">
+                    <h3>HR Department</h3>
+                    <p>For personnel and employment matters</p>
+                    <p><strong>Location:</strong> 3rd Floor, Room 301</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>2024 Cantor College. All rights reserved.</p>
+        <p>&copy; 2024 Cantor College. All rights reserved.</p>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
-

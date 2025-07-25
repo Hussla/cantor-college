@@ -3,147 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cantor College - Specializing in Computing and Design education since 1989. Explore our undergraduate and postgraduate courses in computer science, software engineering, cyber security, and creative design in Sheffield.">
     <title>Cantor College</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    
+    <!-- Critical resource preloading -->
+    <link rel="preload" href="website-images-assets/resized-logo.png" as="image">
+    <link rel="preload" href="website-images-assets/IMG_0523.jpeg" as="image">
+    
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/desktop.css">
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <div class="logo">
                 <img src="website-images-assets/resized-logo.png" alt="Cantor College Logo">
             </div>
             <div id="burger-menu">
-                <button id="burger-button">&#9776;</button>
+                <button id="burger-button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-                <li><a href="resources.html">Learning Resources</a></li>
-                <li><a href="staff-info.html">Staff</a></li>
-                <li><a href="student-info.html">Students</a></li>
-                <li><a href="business.html">Working with Business</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="courses.html" role="menuitem">Courses</a></li>
+                <li role="none"><a href="facilities.html" role="menuitem">Facilities</a></li>
+                <li role="none"><a href="resources.html" role="menuitem">Learning Resources</a></li>
+                <li role="none"><a href="staff-info.html" role="menuitem">Staff</a></li>
+                <li role="none"><a href="student-info.html" role="menuitem">Students</a></li>
+                <li role="none"><a href="business.html" role="menuitem">Working with Business</a></li>
+                <li role="none"><a href="contact-us.html" role="menuitem">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <img src="website-images-assets/IMG_0523.jpeg" alt="Cantor College Background" alt-width="2000" height="698" style="width: 2000px; height: 698px; object-fit: cover; object-position: 50%;" class="hero-bg">
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+        <img src="website-images-assets/IMG_0523.jpeg" alt="Cantor College campus building with modern architecture" class="hero-bg" width="800" height="300" loading="eager" decoding="async">
         <div class="hero-content">
-            <h2>Welcome to Cantor College</h2>
+            <h1>Welcome to Cantor College</h1>
             <p>Your future begins here. Explore our diverse range of courses and be part of an inspiring community.</p>
-            <a href="admissions" class="cta-button">Apply Now</a>
+            <a href="contact-us.html" class="cta-button">Apply Now</a>
         </div>
     </section>
 
     <!-- Image Slideshow Section -->
-    <section id="image-rotator" class="image-rotator">
+    <section id="image-rotator" class="image-rotator" aria-label="Campus image slideshow">
         <div class="slideshow-container">
             <div class="slide fade">
-                <img src="website-images-assets/ACES-032-Computing-Playstation-Lab.jpg" style="width:100%">
+                <img src="website-images-assets/ACES-032-Computing-Playstation-Lab.jpg" alt="Computing lab with PlayStation equipment for gaming development courses" class="slideshow-image" width="800" height="300" loading="lazy" decoding="async">
             </div>
             <div class="slide fade">
-                <img src="website-images-assets/Cantor atrium 3.jpg" style="width:100%">
+                <img src="website-images-assets/Cantor atrium 3.jpg" alt="Modern college atrium with students socializing" class="slideshow-image" width="800" height="300" loading="lazy" decoding="async">
             </div>
             <div class="slide fade">
-                <img src="website-images-assets/Cantor atrium 4.jpg" style="width:100%">
+                <img src="website-images-assets/IMG_1298.jpeg" alt="Students collaborating in modern learning space" class="slideshow-image" width="800" height="300" loading="lazy" decoding="async">
             </div>
+        </div>
+        <div class="slideshow-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Cantor College</h2>
-        <p>
-          Cantor College was established in 1989 to specialize in Computing and Design.   
-          At Cantor College, we want to give students the education they need to achieve their career aims, leaving them equipped with the knowledge, skills, and experience to succeed. 
-          Cantor College gives you the opportunities that can give you the edge when you enter the world of work, through our teaching and our links to some of the world's leading researchers and employers. 
-          Our students have gone on to successful careers in a wide range of industries across the globe.  Whatever your ambitions, our learning and support can help to get the most out of your time with Cantor College, 
-          both as a student and in your future career.
-        </p>
-    </section>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About Cantor College</h2>
+            <p>
+              Cantor College was established in 1989 to specialize in Computing and Design.   
+              At Cantor College, we want to give students the education they need to achieve their career aims, leaving them equipped with the knowledge, skills, and experience to succeed. 
+              Cantor College gives you the opportunities that can give you the edge when you enter the world of work, through our teaching and our links to some of the world's leading researchers and employers. 
+              Our students have gone on to successful careers in a wide range of industries across the globe.  Whatever your ambitions, our learning and support can help to get the most out of your time with Cantor College, 
+              both as a student and in your future career.
+            </p>
+        </section>
 
-    <!-- Courses Section -->
-    <section id="courses" class="courses">
-        <h2>Our Courses</h2>
-        <ul>
-            <li>
-                <h3>Computing Courses</h3>
-                <p>
-                  The College offers a range of courses to suit applicants with varying backgrounds and educational abilities. 
-                  At undergraduate level, there are single BSc Honours Degree courses in Computing, Computer Networks, 
-                  Software Engineering, and Cyber Security with Forensics amongst others.
-                </p>
-                <p>
-                  The College teaches undergraduate and postgraduate courses in a wide range of specialisms, including computer science, software development, information systems, networking, and software engineering. 
-                  It is at the heart of a passionate computing community, including student societies devoted to games development, digital forensics, and programming.
-                </p>
-                <p>
-                  The courses are British Computer Society accredited and are highly relevant to modern industry. 
-                  They are designed to prepare students for professional occupations in Computing and related fields. 
-                  Many graduates continue their studies to pursue a higher degree such as an MSc. or PhD.
-                </p>
-            </li>
-            <li>
-                <h3>Design Courses</h3>
-                <p>
-                  The College is an internationally connected creative community of diverse disciplines housed under one roof. 
-                  We shape our students' futures, preparing them to shape the world through applied knowledge and creativity.
-                </p>
-                <p>
-                  The College's art and design courses don't just train you, they promote alternative ways of thinking, 
-                  making, and communicating; they provide you with space, tools, and inspiration to develop your creative practice and a clear career path. 
-                  You'll get expert teaching from active practitioners and researchers who will encourage you to adopt innovative and resourceful approaches that both perceive and create opportunities for better lives.
-                </p>
-                <p>
-                  You’ll develop your creative practice whilst interacting with your peers in well-equipped studios, making and digital workshops. 
-                  At the same time, you'll learn professional skills by working on applied briefs facilitated through our links with commercial clients, 
-                  cultural institutions, businesses, and organisations.
-                </p>
-            </li>
-        </ul>
-    </section>
+        <!-- Courses Section -->
+        <section id="courses" class="courses">
+            <h2>Our Courses</h2>
+            <ul>
+                <li>
+                    <h3>Computing Courses</h3>
+                    <p>
+                      The College offers a range of courses to suit applicants with varying backgrounds and educational abilities. 
+                      At undergraduate level, there are single BSc Honours Degree courses in Computing, Computer Networks, 
+                      Software Engineering, and Cyber Security with Forensics amongst others.
+                    </p>
+                    <p>
+                      The College teaches undergraduate and postgraduate courses in a wide range of specialisms, including computer science, software development, information systems, networking, and software engineering. 
+                      It is at the heart of a passionate computing community, including student societies devoted to games development, digital forensics, and programming.
+                    </p>
+                    <p>
+                      The courses are British Computer Society accredited and are highly relevant to modern industry. 
+                      They are designed to prepare students for professional occupations in Computing and related fields. 
+                      Many graduates continue their studies to pursue a higher degree such as an MSc. or PhD.
+                    </p>
+                </li>
+                <li>
+                    <h3>Design Courses</h3>
+                    <p>
+                      The College is an internationally connected creative community of diverse disciplines housed under one roof. 
+                      We shape our students' futures, preparing them to shape the world through applied knowledge and creativity.
+                    </p>
+                    <p>
+                      The College's art and design courses don't just train you, they promote alternative ways of thinking, 
+                      making, and communicating; they provide you with space, tools, and inspiration to develop your creative practice and a clear career path. 
+                      You'll get expert teaching from active practitioners and researchers who will encourage you to adopt innovative and resourceful approaches that both perceive and create opportunities for better lives.
+                    </p>
+                    <p>
+                      You'll develop your creative practice whilst interacting with your peers in well-equipped studios, making and digital workshops. 
+                      At the same time, you'll learn professional skills by working on applied briefs facilitated through our links with commercial clients, 
+                      cultural institutions, businesses, and organisations.
+                    </p>
+                </li>
+            </ul>
+        </section>
 
-    <!-- Admissions Section -->
-    <section id="How to find us:" class="How to find us:">
-        <h2>How to find us:</h2>
-        <p>
-          Cantor College
-          Main Street
-          Sheffield
-          SC4 2BB
-          Tel:(01321) 2340 235
-          Fax: (01321) 2340 236
-          Email: info@cantorcollege.ac.uk
-        </p>
-    </section>
+        <!-- Location Section -->
+        <section id="location" class="location">
+            <h2>How to Find Us</h2>
+            <address>
+              Cantor College<br>
+              Main Street<br>
+              Sheffield<br>
+              SC4 2BB<br>
+              <strong>Tel:</strong> <a href="tel:+441321234235">(01321) 2340 235</a><br>
+              <strong>Fax:</strong> (01321) 2340 236<br>
+              <strong>Email:</strong> <a href="mailto:info@cantorcollege.ac.uk">info@cantorcollege.ac.uk</a>
+            </address>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Cantor College. All rights reserved.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

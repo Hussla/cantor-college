@@ -3,56 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact us</title>
+    <meta name="description" content="Contact Cantor College in Sheffield - get in touch for admissions, course information, business partnerships, and general enquiries. Phone: (01321) 2340 235, Email: info@cantorcollege.ac.uk">
+    <title>Contact Us | Cantor College</title>
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/desktop.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <div class="logo">
                 <img src="website-images-assets/resized-logo.png" alt="Cantor College Logo">
             </div>
-                <h1>Contact Us</h1>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="courses.html">Courses</a></li>
-                    <li><a href="facilities.html">Facilities</a></li>
-                    <li><a href="resources.html">Learning Resources</a></li>
-                    <li><a href="staff-info.html">Staff</a></li>
-                    <li><a href="student-info.html">Students</a></li>
-                    <li><a href="business.html">Working with Business</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h2>Contact us</h2>
-                <p>We'd love to hear from you! Fill out the form below to get in touch.</p>
-                <a href="#" class="cta-button">Send Message</a>
+            <div id="burger-menu">
+                <button id="burger-button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
             </div>
-        </section>
-        <section id="contact" class="contact">
-            <h2>Contact us</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-            </div>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="courses.html" role="menuitem">Courses</a></li>
+                <li role="none"><a href="facilities.html" role="menuitem">Facilities</a></li>
+                <li role="none"><a href="resources.html" role="menuitem">Learning Resources</a></li>
+                <li role="none"><a href="staff-info.html" role="menuitem">Staff</a></li>
+                <li role="none"><a href="student-info.html" role="menuitem">Students</a></li>
+                <li role="none"><a href="business.html" role="menuitem">Working with Business</a></li>
+                <li role="none"><a href="contact-us.html" role="menuitem" aria-current="page">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="website-images-assets/Cantor atrium 3.jpg" alt="Cantor College main entrance and reception area" class="hero-bg">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>Get in touch with Cantor College - we're here to help with your enquiries</p>
+        </div>
+    </section>
+
+    <main>
+        <!-- Contact Information Section -->
+        <section class="contact-info-section">
+            <h2>Get in Touch</h2>
+            <div class="contact-info-grid">
+                <div class="contact-method">
+                    <h3>Visit Us</h3>
+                    <address>
+                        Cantor College<br>
+                        Main Street<br>
+                        Sheffield<br>
+                        SC4 2BB
+                    </address>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Call Us</h3>
+                    <p><strong>Main Reception:</strong><br>
+                    <a href="tel:+441321234235">(01321) 2340 235</a></p>
+                    <p><strong>Fax:</strong><br>
+                    (01321) 2340 236</p>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Email Us</h3>
+                    <p><strong>General Enquiries:</strong><br>
+                    <a href="mailto:info@cantorcollege.ac.uk">info@cantorcollege.ac.uk</a></p>
+                    <p><strong>Admissions:</strong><br>
+                    <a href="mailto:admissions@cantorcollege.ac.uk">admissions@cantorcollege.ac.uk</a></p>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>Opening Hours</h3>
+                    <p><strong>Monday - Friday:</strong><br>
+                    8:00 AM - 6:00 PM</p>
+                    <p><strong>Saturday:</strong><br>
+                    9:00 AM - 4:00 PM</p>
+                    <p><strong>Sunday:</strong><br>
+                    Closed</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <div class="form-intro">
+                <p>Have a question or need more information? Fill out the form below and we'll get back to you as soon as possible.</p>
+            </div>
+            
+            <form class="contact-form" action="#" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="enquiry-type">Enquiry Type</label>
+                    <select id="enquiry-type" name="enquiry-type">
+                        <option value="">Please select...</option>
+                        <option value="general">General Information</option>
+                        <option value="admissions">Course Admissions</option>
+                        <option value="business">Business Partnerships</option>
+                        <option value="facilities">Facilities Booking</option>
+                        <option value="support">Student Support</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your enquiry..."></textarea>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">I would like to receive updates about courses and events</label>
+                </div>
+                
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Additional Information Section -->
+        <section class="additional-info">
+            <h2>Additional Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Admissions Office</h3>
+                    <p>For course applications, entry requirements, and academic enquiries.</p>
+                    <p><strong>Location:</strong> Ground Floor, Main Building</p>
+                    <p><strong>Hours:</strong> Monday-Friday, 9:00 AM - 5:00 PM</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Student Services</h3>
+                    <p>For current student support, accommodation, and welfare services.</p>
+                    <p><strong>Location:</strong> First Floor, Student Hub</p>
+                    <p><strong>Hours:</strong> Monday-Friday, 8:30 AM - 5:30 PM</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Business Services</h3>
+                    <p>For corporate training, partnerships, and consultancy services.</p>
+                    <p><strong>Email:</strong> <a href="mailto:business@cantorcollege.ac.uk">business@cantorcollege.ac.uk</a></p>
+                    <p><strong>Direct Line:</strong> <a href="tel:+441321234240">(01321) 2340 240</a></p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>Media Enquiries</h3>
+                    <p>For press releases, media interviews, and publicity matters.</p>
+                    <p><strong>Email:</strong> <a href="mailto:media@cantorcollege.ac.uk">media@cantorcollege.ac.uk</a></p>
+                    <p><strong>Direct Line:</strong> <a href="tel:+441321234245">(01321) 2340 245</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact Section -->
+        <section class="emergency-contact">
+            <h2>Emergency Contact</h2>
+            <div class="emergency-info">
+                <p>For urgent matters outside of normal business hours, please contact our security team:</p>
+                <p><strong>Emergency Line:</strong> <a href="tel:+441321234999">(01321) 2340 999</a></p>
+                <p><strong>Available:</strong> 24/7 for genuine emergencies only</p>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>2024 Cantor College. All rights reserved.</p>
+        <p>&copy; 2024 Cantor College. All rights reserved.</p>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,59 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facilities</title>
+    <meta name="description" content="Explore Cantor College's world-class facilities including advanced computing labs, PlayStation development studios, modern lecture theatres, creative spaces, and collaborative learning environments in Sheffield.">
+    <title>Facilities | Cantor College</title>
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/desktop.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <div class="logo">
                 <img src="website-images-assets/resized-logo.png" alt="Cantor College Logo">
             </div>
-                <h1>Facilities</h1>
+            <div id="burger-menu">
+                <button id="burger-button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-                <li><a href="resources.html">Learning Resources</a></li>
-                <li><a href="staff-info.html">Staff</a></li>
-                <li><a href="student-info.html">Students</a></li>
-                <li><a href="business.html">Working with Business</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="courses.html" role="menuitem">Courses</a></li>
+                <li role="none"><a href="facilities.html" role="menuitem" aria-current="page">Facilities</a></li>
+                <li role="none"><a href="resources.html" role="menuitem">Learning Resources</a></li>
+                <li role="none"><a href="staff-info.html" role="menuitem">Staff</a></li>
+                <li role="none"><a href="student-info.html" role="menuitem">Students</a></li>
+                <li role="none"><a href="business.html" role="menuitem">Working with Business</a></li>
+                <li role="none"><a href="contact-us.html" role="menuitem">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    <section id ="facilities" class="facilities">
-        <div class="facilities">
-            <p>
-                The College is located in the attractive and pleasantly refurbished Building. The building houses computing laboratories, and lecture/tutorial rooms. It has its own catering facilities and student work areas. There is also a car park to the back of the building.
-            </p>
-            <p>
-                Our building has a space of 9500m², houses over 240 staff, and provides teaching space for more than 1600 students.
-            </p>
-            <h3>Facilities Include:</h3>
-            <ul>
-                <li>wi-fi technology</li>
-                <li>pool teaching rooms, including classrooms to teach from 25 - 80 students</li>
-                <li>specialist faculty facilities</li>
-                <li>a double height lecture theatre at first and second floor level</li>
-                <li>dramatic three-storey glass open atrium</li>
-                <li>meeting rooms</li>
-                <li>office accommodation</li>
-                <li>specialist IT facilities</li>
-                <li>reception desk area</li>
-                <li>catering outlet</li>
-                <li>parking for disabled badge holders</li>
-                <li>cycle racks</li>
-                <li>gallery</li>
-            </ul>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="website-images-assets/Cantor atrium 3.jpg" alt="Modern college atrium showcasing our facilities" class="hero-bg" width="800" height="300" loading="eager" decoding="async">
+        <div class="hero-content">
+            <h1>World-Class Facilities</h1>
+            <p>Discover our state-of-the-art learning environments designed to inspire innovation and creativity</p>
         </div>
     </section>
 
+    <main>
+        <!-- Facility Overview -->
+        <section class="facility-overview">
+            <h2>Our Campus</h2>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p>
+                        The College is located in the attractive and pleasantly refurbished Building. The building houses computing laboratories, and lecture/tutorial rooms. It has its own catering facilities and student work areas. There is also a car park to the back of the building.
+                    </p>
+                    <p>
+                        Our building has a space of 9500m², houses over 240 staff, and provides teaching space for more than 1600 students.
+                    </p>
+                </div>
+                <div class="overview-image">
+                    <img src="website-images-assets/Cantor4.jpg" alt="Cantor College main building exterior" class="facility-image" width="500" height="300" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <!-- Computing Labs Section -->
+        <section class="facility-section">
+            <h2>Computing Laboratories</h2>
+            <p class="section-intro">Our cutting-edge computing labs are equipped with the latest technology to support your learning in programming, cybersecurity, networking, and game development.</p>
+            <div class="facility-gallery">
+                <div class="gallery-item">
+                    <img src="website-images-assets/ACES-032-Computing-Playstation-Lab.jpg" alt="PlayStation development lab with gaming equipment" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>PlayStation Development Lab</h3>
+                        <p>Professional gaming development environment with industry-standard equipment</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="website-images-assets/ACES-036-Computing-Playstation-Lab-2.jpg" alt="Advanced computing lab with modern workstations" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Advanced Computing Lab</h3>
+                        <p>High-performance workstations for software development and cybersecurity</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="website-images-assets/DSCF5127.jpg" alt="Computer networking lab with server equipment" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Networking Lab</h3>
+                        <p>Professional networking equipment for hands-on learning</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lecture Theatres Section -->
+        <section class="facility-section">
+            <h2>Lecture Theatres</h2>
+            <p class="section-intro">Modern lecture theatres designed for optimal learning with state-of-the-art audio-visual equipment and comfortable seating.</p>
+            <div class="facility-gallery">
+                <div class="gallery-item">
+                    <img src="website-images-assets/CantorLectureTheatre4.JPG" alt="Modern lecture theatre with tiered seating" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Main Lecture Theatre</h3>
+                        <p>Capacity for 200+ students with advanced presentation technology</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="website-images-assets/CantorLectureTheatre5.JPG" alt="Lecture theatre showing teaching environment" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Interactive Learning Space</h3>
+                        <p>Flexible seating arrangements for collaborative learning</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="website-images-assets/CantorLectureTheatre11.jpg" alt="Lecture theatre with modern audio-visual equipment" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Technology-Enhanced Theatre</h3>
+                        <p>Cutting-edge AV systems for immersive learning experiences</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Spaces Section -->
+        <section class="facility-section">
+            <h2>Student Social Spaces</h2>
+            <p class="section-intro">Comfortable and inspiring spaces for students to collaborate, study, and relax between classes.</p>
+            <div class="facility-gallery">
+                <div class="gallery-item">
+                    <img src="website-images-assets/Cantor atrium 4.jpg" alt="College atrium with students socializing" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Central Atrium</h3>
+                        <p>Three-storey glass atrium providing natural light and social space</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="website-images-assets/IMG_1298.jpeg" alt="Students collaborating in modern learning space" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Collaborative Study Areas</h3>
+                        <p>Flexible spaces designed for group work and peer learning</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="website-images-assets/IMG_1318.jpeg" alt="Student work areas with modern furniture" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Quiet Study Zones</h3>
+                        <p>Dedicated areas for individual study and reflection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creative Spaces Section -->
+        <section class="facility-section">
+            <h2>Creative & Design Spaces</h2>
+            <p class="section-intro">Inspiring environments for art, design, and creative projects with professional-grade equipment and tools.</p>
+            <div class="facility-gallery">
+                <div class="gallery-item">
+                    <img src="website-images-assets/cantor-gallery.jpg" alt="Art gallery space for student exhibitions" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Student Gallery</h3>
+                        <p>Professional exhibition space for showcasing student artwork</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="website-images-assets/IMG_1437.jpeg" alt="Design studio with creative equipment" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Design Studios</h3>
+                        <p>Well-equipped studios for digital and traditional art creation</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="website-images-assets/IMG_1441.jpeg" alt="Creative workspace with modern tools" class="gallery-image">
+                    <div class="gallery-caption">
+                        <h3>Digital Media Lab</h3>
+                        <p>Advanced software and hardware for multimedia projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities List -->
+        <section class="facilities-list">
+            <h2>Complete Facilities Overview</h2>
+            <div class="facilities-grid">
+                <div class="facility-category">
+                    <h3>Technology & Learning</h3>
+                    <ul>
+                        <li>Wi-fi technology throughout</li>
+                        <li>Pool teaching rooms (25-80 students)</li>
+                        <li>Specialist IT facilities</li>
+                        <li>Advanced computing laboratories</li>
+                        <li>PlayStation development lab</li>
+                        <li>Networking and cybersecurity labs</li>
+                    </ul>
+                </div>
+                <div class="facility-category">
+                    <h3>Spaces & Architecture</h3>
+                    <ul>
+                        <li>Double height lecture theatre</li>
+                        <li>Dramatic three-storey glass atrium</li>
+                        <li>Student gallery and exhibition space</li>
+                        <li>Meeting and conference rooms</li>
+                        <li>Quiet study areas</li>
+                        <li>Collaborative workspaces</li>
+                    </ul>
+                </div>
+                <div class="facility-category">
+                    <h3>Support & Amenities</h3>
+                    <ul>
+                        <li>Reception and information desk</li>
+                        <li>Catering outlet and café</li>
+                        <li>Office accommodation</li>
+                        <li>Parking for disabled badge holders</li>
+                        <li>Secure cycle racks</li>
+                        <li>Student work areas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campus Location -->
+        <section class="campus-location">
+            <h2>Campus Location</h2>
+            <div class="location-content">
+                <div class="location-text">
+                    <p>Our campus is strategically located in Sheffield, providing easy access to the city center while maintaining a focused academic environment. The building's modern architecture and thoughtful design create an inspiring atmosphere for learning and innovation.</p>
+                    <div class="location-stats">
+                        <div class="stat">
+                            <span class="stat-number">9,500m²</span>
+                            <span class="stat-label">Total Floor Space</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">240+</span>
+                            <span class="stat-label">Staff Members</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1,600+</span>
+                            <span class="stat-label">Students</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-image">
+                    <img src="website-images-assets/872SHUSpaceCitymap.jpg" alt="Campus location map showing Sheffield area" class="facility-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
-        <p>2024 Cantor College. All rights reserved.</p>
+        <p>&copy; 2024 Cantor College. All rights reserved.</p>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

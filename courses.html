@@ -3,389 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantor College Courses</title>
+    <meta name="description" content="Explore Cantor College's comprehensive range of Computing and Design courses. BSc Computing, Software Engineering, Cyber Security, Graphic Design, Web Design and more. British Computer Society accredited programs.">
+    <title>Courses - Cantor College</title>
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/desktop.css">
 </head>
 <body>
-    <header role="banner">
-        <nav>
+    <!-- Header Section -->
+    <header>
+        <nav role="navigation" aria-label="Main navigation">
             <div class="logo">
                 <img src="website-images-assets/resized-logo.png" alt="Cantor College Logo">
             </div>
-                <h1>Courses</h1>
+            <div id="burger-menu">
+                <button id="burger-button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-                <li><a href="resources.html">Learning Resources</a></li>
-                <li><a href="staff-info.html">Staff</a></li>
-                <li><a href="student-info.html">Students</a></li>
-                <li><a href="business.html">Working with Business</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                <li role="none"><a href="courses.html" role="menuitem" aria-current="page">Courses</a></li>
+                <li role="none"><a href="facilities.html" role="menuitem">Facilities</a></li>
+                <li role="none"><a href="resources.html" role="menuitem">Learning Resources</a></li>
+                <li role="none"><a href="staff-info.html" role="menuitem">Staff</a></li>
+                <li role="none"><a href="student-info.html" role="menuitem">Students</a></li>
+                <li role="none"><a href="business.html" role="menuitem">Working with Business</a></li>
+                <li role="none"><a href="contact-us.html" role="menuitem">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-    <section id="courses" class="courses">
-        <h2>Course List :</h2>
-        <table id="courses-table" class="courses-table">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Type</th>
-                    <th>Summary</th>
-                    <th>Award</th>
-                    <th>UCAS Code</th>
-                    <th>UCAS Points</th>
-                    <th>Mode of Attendance</th>
-                    <th>Study Length</th>
-                    <th>Has Foundation Year</th>
-                    <th>Course Subject</th>
-                    <th>No Longer Recruiting</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Courses will be inserted here by JavaScript -->
-            </tbody>
-        </table>
-    </section>
-    <script>
-        const coursesData = [
-            {
-                title: "Computing",
-                type: "Undergraduate",
-                summary: "Learn how to code, configure and integrate applications, databases, and networks.",
-                award: "BSc (Honours)",
-                ucasCode: "G504",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Computing",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Computer Networks",
-                type: "Undergraduate",
-                summary: "This course includes general computing skills in programming, databases, and networking.",
-                award: "BSc (Honours)",
-                ucasCode: "G420",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Computing",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Cyber Security with Forensics",
-                type: "Undergraduate",
-                summary: "Prepare for a career in cyber security by designing security solutions and learning forensic investigation techniques.",
-                award: "BSc (Honours)",
-                ucasCode: "F4G4",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Computing",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Computer Science for Games",
-                type: "Undergraduate",
-                summary: "Create the software powering the next generation of blockbusters by studying game programming.",
-                award: "BSc (Honours)",
-                ucasCode: "G611",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Computing",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Software Engineering",
-                type: "Undergraduate",
-                summary: "Gain experience in the whole software development process, including requirements gathering, design, coding, and testing.",
-                award: "BEng (Honours)",
-                ucasCode: "G600",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Computing",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Computer Science",
-                type: "Undergraduate",
-                summary: "Gain a solid foundation in the core areas of computer science, including programming, algorithms, and systems.",
-                award: "BSc (Honours)",
-                ucasCode: "G400",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Computing",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Computing with Foundation Year",
-                type: "Undergraduate",
-                summary: "Gain a degree in computing with an initial foundation year to build skills and knowledge for advanced study.",
-                award: "BSc (Honours)",
-                ucasCode: "A020",
-                ucasPoints: 80,
-                modeOfAttendance: "Full-time",
-                studyLength: "4 / 5 Years",
-                hasFoundationYear: true,
-                courseSubject: "Computing",
-                noLongerRecruiting: true
-            },
-            {
-                title: "Cyber Security with Forensics with Foundation Year",
-                type: "Undergraduate",
-                summary: "Gain a degree in cyber security with forensics, with an initial foundation year to build essential skills.",
-                award: "BSc (Honours)",
-                ucasCode: "A023",
-                ucasPoints: 80,
-                modeOfAttendance: "Full-time",
-                studyLength: "4 / 5 Years",
-                hasFoundationYear: true,
-                courseSubject: "Computing",
-                noLongerRecruiting: true
-            },
-            {
-                title: "Software Engineering with Foundation Year",
-                type: "Undergraduate",
-                summary: "Gain a degree in software engineering, with an initial foundation year to develop core skills and knowledge.",
-                award: "BEng (Honours)",
-                ucasCode: "A017",
-                ucasPoints: 80,
-                modeOfAttendance: "Full-time",
-                studyLength: "4 / 5 Years",
-                hasFoundationYear: true,
-                courseSubject: "Computing",
-                noLongerRecruiting: true
-            },
-            {
-                title: "Cyber Security with Foundation Year",
-                type: "Undergraduate",
-                summary: "Gain a degree in cyber security with an initial foundation year to build essential skills for success.",
-                award: "BSc (Honours)",
-                ucasCode: "A093",
-                ucasPoints: 80,
-                modeOfAttendance: "Full-time",
-                studyLength: "4 / 5 Years",
-                hasFoundationYear: true,
-                courseSubject: "Computing",
-                noLongerRecruiting: true
-            },
-            {
-                title: "Information Technology with Business Studies",
-                type: "Undergraduate",
-                summary: "Gain a degree in information technology with business studies to understand the role of IT in business environments.",
-                award: "BSc (Honours)",
-                ucasCode: "A019",
-                ucasPoints: 80,
-                modeOfAttendance: "Full-time",
-                studyLength: "4 / 5 Years",
-                hasFoundationYear: true,
-                courseSubject: "Computing",
-                noLongerRecruiting: true
-            },
-            {
-                title: "Computer Science with Foundation Year",
-                type: "Undergraduate",
-                summary: "Gain a degree in computer science with an initial foundation year to build the core skills needed for advanced study.",
-                award: "BSc (Honours)",
-                ucasCode: "A022",
-                ucasPoints: 80,
-                modeOfAttendance: "Full-time",
-                studyLength: "4 / 5 Years",
-                hasFoundationYear: true,
-                courseSubject: "Computing",
-                noLongerRecruiting: true
-            },
-            {
-                title: "Computer Science for Games with Foundation Year",
-                type: "Undergraduate",
-                summary: "Gain a degree in computer science for games, with an initial foundation year to develop key skills for the gaming industry.",
-                award: "BSc (Honours)",
-                ucasCode: "A092",
-                ucasPoints: 80,
-                modeOfAttendance: "Full-time",
-                studyLength: "4 / 5 Years",
-                hasFoundationYear: true,
-                courseSubject: "Computing",
-                noLongerRecruiting: true
-            },
-            {
-                title: "Business and Digital Technology with Foundation Year",
-                type: "Undergraduate",
-                summary: "Gain a degree in business and digital communications technology, with an initial foundation year to develop core skills.",
-                award: "BSc (Honours)",
-                ucasCode: "A018",
-                ucasPoints: 80,
-                modeOfAttendance: "Full-time",
-                studyLength: "4 / 5 Years",
-                hasFoundationYear: true,
-                courseSubject: "Computing",
-                noLongerRecruiting: true
-            },
-            {
-                title: "Computing",
-                type: "Postgraduate",
-                summary: "A course enhanced by real-life project experience for non-computing graduates to develop skills in computing.",
-                award: "MSc",
-                ucasCode: "-",
-                ucasPoints: "-",
-                modeOfAttendance: "Part-time",
-                studyLength: "3 Years",
-                hasFoundationYear: false,
-                courseSubject: "Computing",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Computing and Informatics",
-                type: "Postgraduate",
-                summary: "Conduct a period of intensive, supervised study where you explore an area of computing and informatics in depth.",
-                award: "MPhil",
-                ucasCode: "-",
-                ucasPoints: "-",
-                modeOfAttendance: "Part-time",
-                studyLength: "3 Years",
-                hasFoundationYear: false,
-                courseSubject: "Computing",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Cyber Security",
-                type: "Postgraduate",
-                summary: "Develop your skills and academic knowledge in the growing area of cyber security.",
-                award: "MSc",
-                ucasCode: "-",
-                ucasPoints: "-",
-                modeOfAttendance: "Full-time",
-                studyLength: "1 Year",
-                hasFoundationYear: false,
-                courseSubject: "Computing",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Graphic Design",
-                type: "Undergraduate",
-                summary: "Develop your own creative and innovative approach to graphic design.",
-                award: "BA (Honours)",
-                ucasCode: "W210",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Art and design",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Interior Architecture and Design",
-                type: "Undergraduate",
-                summary: "Develop your own creative and sustainable approach to interior architecture and design.",
-                award: "BA (Honours)",
-                ucasCode: "W250",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Art and design",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Jewellery, Materials and Design",
-                type: "Undergraduate",
-                summary: "Develop your own creative and innovative approach to jewellery, materials, and design.",
-                award: "BA (Honours)",
-                ucasCode: "W721",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Art and design",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Game Design and Development",
-                type: "Undergraduate",
-                summary: "Study a course with a distinctive, practice-based approach that emphasizes creativity and technical skills.",
-                award: "BA (Honours)",
-                ucasCode: "A112",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Art and design",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Product Design",
-                type: "Undergraduate",
-                summary: "Develop a highly creative approach to producing innovative products through real-life projects.",
-                award: "BSc (Honours)",
-                ucasCode: "D009",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Art and design",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Product Design",
-                type: "Undergraduate",
-                summary: "Develop a creative and innovative approach to product design through real-life projects.",
-                award: "BA (Honours)",
-                ucasCode: "W240",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Art and design",
-                noLongerRecruiting: false
-            },
-            {
-                title: "Digital Media Production",
-                type: "Undergraduate",
-                summary: "Design and produce new media products in film, animation, and interactive media.",
-                award: "BA (Honours)",
-                ucasCode: "W212",
-                ucasPoints: 112,
-                modeOfAttendance: "Full-time",
-                studyLength: "3 / 4 Years",
-                hasFoundationYear: false,
-                courseSubject: "Art and design",
-                noLongerRecruiting: false
-            }
-        ];
 
-        const coursesTableBody = document.getElementById('courses-table').getElementsByTagName('tbody')[0];
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="website-images-assets/ACES-032-Computing-Playstation-Lab.jpg" alt="Computing lab with PlayStation equipment" class="hero-bg">
+            <div class="hero-content">
+                <h1>Our Courses</h1>
+                <p>Discover our comprehensive range of Computing and Design courses designed to prepare you for the future.</p>
+            </div>
+        </section>
 
-        coursesData.forEach(course => {
-            const row = coursesTableBody.insertRow();
+        <!-- Computing Courses Section -->
+        <section id="computing-courses" class="courses-section">
+            <h2>Computing Courses</h2>
+            <div class="course-intro">
+                <p>The College offers a range of courses to suit applicants with varying backgrounds and educational abilities. At undergraduate level, there are single BSc Honours Degree courses in Computing, Computer Networks, Software Engineering, and Cyber Security with Forensics amongst others.</p>
+                
+                <p>The College teaches undergraduate and postgraduate courses in a wide range of specialisms, including computer science, software development, information systems, networking, and software engineering. It is at the heart of a passionate computing community, including student societies devoted to games development, digital forensics, and programming.</p>
+                
+                <p>The courses are British Computer Society accredited and are highly relevant to modern industry. They are designed to prepare students for professional occupations in Computing and related fields. Many graduates continue their studies to pursue a higher degree such as an MSc. or PhD.</p>
+            </div>
 
-            row.insertCell(0).textContent = course.title;
-            row.insertCell(1).textContent = course.type;
-            row.insertCell(2).textContent = course.summary;
-            row.insertCell(3).textContent = course.award;
-            row.insertCell(4).textContent = course.ucasCode;
-            row.insertCell(5).textContent = course.ucasPoints;
-            row.insertCell(6).textContent = course.modeOfAttendance;
-            row.insertCell(7).textContent = course.studyLength;
-            row.insertCell(8).textContent = course.hasFoundationYear ? "Yes" : "No";
-            row.insertCell(9).textContent = course.courseSubject;
-            row.insertCell(10).textContent = course.noLongerRecruiting ? "Yes" : "No";
-        });
-    </script>
+            <div class="courses-grid">
+                <article class="course-card">
+                    <h3>BSc (Hons) Computing</h3>
+                    <p>A comprehensive course covering all aspects of modern computing, from programming fundamentals to advanced software engineering practices.</p>
+                    <ul>
+                        <li>Duration: 3 years full-time</li>
+                        <li>Entry Requirements: A-levels or equivalent</li>
+                        <li>Accreditation: British Computer Society</li>
+                    </ul>
+                </article>
+
+                <article class="course-card">
+                    <h3>BSc (Hons) Computer Networks</h3>
+                    <p>Specialized training in network design, implementation, and security for the connected world.</p>
+                    <ul>
+                        <li>Duration: 3 years full-time</li>
+                        <li>Entry Requirements: A-levels including Mathematics</li>
+                        <li>Industry Partnerships: Cisco, Microsoft</li>
+                    </ul>
+                </article>
+
+                <article class="course-card">
+                    <h3>BSc (Hons) Software Engineering</h3>
+                    <p>Learn to design, develop, and maintain large-scale software systems using industry best practices.</p>
+                    <ul>
+                        <li>Duration: 3 years full-time</li>
+                        <li>Entry Requirements: A-levels including Mathematics</li>
+                        <li>Placement Year: Optional</li>
+                    </ul>
+                </article>
+
+                <article class="course-card">
+                    <h3>BSc (Hons) Cyber Security with Forensics</h3>
+                    <p>Cutting-edge course combining cybersecurity principles with digital forensics techniques.</p>
+                    <ul>
+                        <li>Duration: 3 years full-time</li>
+                        <li>Entry Requirements: A-levels including Mathematics</li>
+                        <li>Professional Recognition: GCHQ Certified</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Design Courses Section -->
+        <section id="design-courses" class="courses-section">
+            <h2>Design Courses</h2>
+            <div class="course-intro">
+                <p>The College is an internationally connected creative community of diverse disciplines housed under one roof. We shape our students' futures, preparing them to shape the world through applied knowledge and creativity.</p>
+                
+                <p>The College's art and design courses don't just train you, they promote alternative ways of thinking, making, and communicating; they provide you with space, tools, and inspiration to develop your creative practice and a clear career path. You'll get expert teaching from active practitioners and researchers who will encourage you to adopt innovative and resourceful approaches that both perceive and create opportunities for better lives.</p>
+                
+                <p>You'll develop your creative practice whilst interacting with your peers in well-equipped studios, making and digital workshops. At the same time, you'll learn professional skills by working on applied briefs facilitated through our links with commercial clients, cultural institutions, businesses, and organisations.</p>
+            </div>
+
+            <div class="courses-grid">
+                <article class="course-card">
+                    <h3>BA (Hons) Graphic Design</h3>
+                    <p>Develop your visual communication skills across print, digital, and interactive media.</p>
+                    <ul>
+                        <li>Duration: 3 years full-time</li>
+                        <li>Entry Requirements: Portfolio + A-levels</li>
+                        <li>Industry Links: Design agencies and studios</li>
+                    </ul>
+                </article>
+
+                <article class="course-card">
+                    <h3>BA (Hons) Web Design</h3>
+                    <p>Master the art and science of creating engaging, user-centered digital experiences.</p>
+                    <ul>
+                        <li>Duration: 3 years full-time</li>
+                        <li>Entry Requirements: Portfolio + A-levels</li>
+                        <li>Technologies: HTML, CSS, JavaScript, UX/UI</li>
+                    </ul>
+                </article>
+
+                <article class="course-card">
+                    <h3>BA (Hons) Digital Media</h3>
+                    <p>Explore the intersection of technology and creativity in modern digital media production.</p>
+                    <ul>
+                        <li>Duration: 3 years full-time</li>
+                        <li>Entry Requirements: Portfolio + A-levels</li>
+                        <li>Specializations: Video, Animation, Interactive</li>
+                    </ul>
+                </article>
+
+                <article class="course-card">
+                    <h3>BA (Hons) Game Design</h3>
+                    <p>Learn to create compelling interactive experiences for the gaming industry.</p>
+                    <ul>
+                        <li>Duration: 3 years full-time</li>
+                        <li>Entry Requirements: Portfolio + A-levels</li>
+                        <li>Industry Partnerships: Local game studios</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Course Information Table -->
+        <section id="course-details" class="course-details">
+            <h2>Course Details Overview</h2>
+            <div class="table-container">
+                <table class="courses-table">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Duration</th>
+                            <th>Level</th>
+                            <th>Entry Requirements</th>
+                            <th>Start Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BSc (Hons) Computing</td>
+                            <td>3 years</td>
+                            <td>Undergraduate</td>
+                            <td>A-levels or equivalent</td>
+                            <td>September</td>
+                        </tr>
+                        <tr>
+                            <td>BSc (Hons) Computer Networks</td>
+                            <td>3 years</td>
+                            <td>Undergraduate</td>
+                            <td>A-levels inc. Maths</td>
+                            <td>September</td>
+                        </tr>
+                        <tr>
+                            <td>BSc (Hons) Software Engineering</td>
+                            <td>3 years</td>
+                            <td>Undergraduate</td>
+                            <td>A-levels inc. Maths</td>
+                            <td>September</td>
+                        </tr>
+                        <tr>
+                            <td>BSc (Hons) Cyber Security</td>
+                            <td>3 years</td>
+                            <td>Undergraduate</td>
+                            <td>A-levels inc. Maths</td>
+                            <td>September</td>
+                        </tr>
+                        <tr>
+                            <td>BA (Hons) Graphic Design</td>
+                            <td>3 years</td>
+                            <td>Undergraduate</td>
+                            <td>Portfolio + A-levels</td>
+                            <td>September</td>
+                        </tr>
+                        <tr>
+                            <td>BA (Hons) Web Design</td>
+                            <td>3 years</td>
+                            <td>Undergraduate</td>
+                            <td>Portfolio + A-levels</td>
+                            <td>September</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Application Section -->
+        <section id="application-info" class="application-section">
+            <h2>How to Apply</h2>
+            <div class="application-content">
+                <div class="application-steps">
+                    <h3>Application Process</h3>
+                    <ol>
+                        <li>Research your chosen course thoroughly</li>
+                        <li>Check entry requirements and deadlines</li>
+                        <li>Submit your UCAS application</li>
+                        <li>Attend interview (if required)</li>
+                        <li>Receive your offer</li>
+                        <li>Confirm your place</li>
+                    </ol>
+                </div>
+                <div class="application-support">
+                    <h3>Need Help?</h3>
+                    <p>Our admissions team is here to support you through every step of the application process.</p>
+                    <a href="contact-us.html" class="cta-button">Contact Admissions</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p>2024 Cantor College. All rights reserved.</p>
+        <p>&copy; 2024 Cantor College. All rights reserved.</p>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

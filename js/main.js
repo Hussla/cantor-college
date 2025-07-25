@@ -1,48 +1,68 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const burgerButton = document.getElementById('burger-button');
-    const navLinks = document.querySelector('.nav-links');
+// Minimal JavaScript for critical functionality only
+(function() {
+    'use strict';
+    
+    // Burger menu - critical functionality
+    function initBurgerMenu() {
+        const burgerButton = document.getElementById('burger-button');
+        const navLinks = document.querySelector('.nav-links');
 
-    burgerButton.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-    });
-});
-
-let ImageAr = [
-    'website-images-assets/aces-032-computing-playstation-lab.jpg',
-    'website-images-assets/aces-036-computing-playstation-lab-2.jpg',
-    'website-images-assets/cantor4.jpg',
-    'website-images-assets/cantor-atrium-3.jpg',
-    'website-images-assets/cantor-atrium-4.jpg',
-    'website-images-assets/cantor-lecture-theatre-3.jpg',
-    'website-images-assets/cantor-lecture-theatre-4.jpg',
-    'website-images-assets/cantor-lecture-theatre-5.jpg',
-    'website-images-assets/cantor-lecture-theatre-11.jpg',
-    'website-images-assets/dscf5127.jpg',
-    'website-images-assets/img_0170.jpeg',
-    'website-images-assets/img_1005.jpeg',
-    'website-images-assets/img_1087.jpeg',
-    'website-images-assets/img_1089.jpeg',
-    'website-images-assets/img_1099.jpeg',
-    'website-images-assets/img_1298.jpeg',
-    'website-images-assets/img_1318.jpeg',
-    'website-images-assets/img_1437.jpeg',
-    'website-images-assets/img_1439.jpeg',
-    'website-images-assets/img_1441.jpeg',    
-    'website-images-assets/img_1642.jpeg',
-    'website-images-assets/img_1808.jpeg',
-    'website-images-assets/img_1809.jpeg',
-    'website-images-assets/main_2529_image4.png'
-];
-
-let ImageRotator = document.getElementById('image-rotator').querySelector('.slide img');
-let ImageCounter = 0;
-function changeImage() {
-    ImageRotator.setAttribute('src', ImageAr[ImageCounter]);
-    ImageCounter++;
-    if (ImageCounter >= ImageAr.length) {
-        ImageCounter = 0;
+        if (burgerButton && navLinks) {
+            burgerButton.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                const isExpanded = navLinks.classList.contains('active');
+                burgerButton.setAttribute('aria-expanded', isExpanded);
+            });
+        }
     }
-    console.info(ImageCounter);
-}
 
-setInterval(changeImage, 2000);
+    // Simple slideshow without complex animations
+    function initSlideshow() {
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        
+        if (slides.length === 0) return;
+
+        let currentSlide = 0;
+        
+        // Show first slide immediately
+        if (slides[0]) slides[0].classList.add('active');
+        if (indicators[0]) indicators[0].classList.add('active');
+        
+        function showSlide(index) {
+            // Hide current
+            if (slides[currentSlide]) slides[currentSlide].classList.remove('active');
+            if (indicators[currentSlide]) indicators[currentSlide].classList.remove('active');
+            
+            // Show new
+            currentSlide = index;
+            if (slides[currentSlide]) slides[currentSlide].classList.add('active');
+            if (indicators[currentSlide]) indicators[currentSlide].classList.add('active');
+        }
+        
+        // Auto-advance slides
+        setInterval(function() {
+            const nextIndex = (currentSlide + 1) % slides.length;
+            showSlide(nextIndex);
+        }, 5000);
+        
+        // Indicator clicks
+        indicators.forEach(function(indicator, index) {
+            indicator.addEventListener('click', function() {
+                showSlide(index);
+            });
+        });
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            initBurgerMenu();
+            // Delay slideshow to reduce initial blocking
+            setTimeout(initSlideshow, 200);
+        });
+    } else {
+        initBurgerMenu();
+        setTimeout(initSlideshow, 200);
+    }
+})();
