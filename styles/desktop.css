@@ -224,12 +224,12 @@
 @media (min-width: 768px) {
     .overview-content {
         flex-direction: row;
-        text-align: left;
+        text-align: center;
     }
     
     .location-content {
         flex-direction: row;
-        text-align: left;
+        text-align: center;
     }
     
     .facility-gallery {
