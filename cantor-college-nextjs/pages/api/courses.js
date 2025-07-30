@@ -1,4 +1,4 @@
-const connection = require('../../db');
+import connection from '../../db';
 
 export default function handler(req, res) {
     console.log(`API endpoint hit with method: ${req.method}`);
