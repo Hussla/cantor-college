@@ -33,10 +33,14 @@ cantor-college/
 │   └── main.js              # Interactive JavaScript features
 ├── website-images-assets/    # All provided images
 ├── evidence/                 # Planning, testing documentation and wireframes
-│   ├── wireframe-homepage-mobile.md
-│   ├── wireframe-homepage-desktop.md
-│   ├── wireframe-courses-page.md
-│   └── information-architecture.md
+│   ├── wireframes/          # Design wireframes and layouts
+│   │   ├── wireframe-homepage-mobile.md
+│   │   ├── wireframe-homepage-desktop.md
+│   │   └── wireframe-courses-page.md
+│   ├── fix1.png             # Testing evidence
+│   ├── problem1.png         # Issue documentation
+│   ├── problem2.png         # Issue documentation
+│   └── problem3.png         # Issue documentation
 └── cantor-college-nextjs/    # Next.js application with database
     ├── pages/
     │   ├── courses.js        # Dynamic courses page
@@ -120,8 +124,8 @@ CREATE TABLE courses (
 ## Design Process
 
 ### Planning & Wireframing
-- Information Architecture - Structured content organisation
-- Mobile Wireframes - Mobile-first design approach
+- Design Wireframes - Located in `evidence/wireframes/` folder
+- Mobile Wireframes - Mobile-first design approach  
 - Desktop Wireframes - Responsive layout planning
 - User Experience - Navigation and content flow
 
@@ -176,10 +180,10 @@ The database contains courses across different categories:
 ## Assignment Requirements Met
 
 ### Planning and Resources (10%)
-- Wireframing - Wireframes for mobile and desktop
+- Wireframing - Wireframes located in `evidence/wireframes/` folder
 - Content Usage - All provided text content utilised
 - File Structure - Organisation and naming conventions
-- Evidence Documentation - Planning materials
+- Evidence Documentation - Planning materials and testing evidence
 
 ### Quality of Application Code (70%)
 - HTML Quality - Semantic HTML5 with proper structure

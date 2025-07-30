@@ -1493,3 +1493,100 @@ footer {
         flex-direction: column;
     }
 }
+
+/* Accessibility Styles */
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background-color: #003366;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Form accessibility enhancements */
+fieldset {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #fafafa;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #003366;
+    padding: 0 0.5rem;
+    background-color: white;
+}
+
+/* Focus indicators for accessibility */
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: 3px solid #004080;
+    outline-offset: 2px;
+}
+
+/* Required field indicators */
+label span[aria-label="required"] {
+    color: #dc3545;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+/* Button hover and focus states */
+button:hover,
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,51,102,0.3);
+}
+
+button:focus,
+.submit-button:focus {
+    outline: 3px solid #004080;
+    outline-offset: 2px;
+}
+
+/* Image Performance Optimisations */
+.hero-bg,
+.service-image,
+.news-img,
+.resource-img {
+    content-visibility: auto;
+    contain-intrinsic-size: 300px 200px;
+}
+
+.hero-bg {
+    contain-intrinsic-size: 100vw 300px;
+}
+
+.news-img,
+.resource-img {
+    contain-intrinsic-size: 100vw 250px;
+}

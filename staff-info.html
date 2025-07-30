@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Staff resources and services at Cantor College including academic registry, financial services, IT support, professional development, and HR assistance for faculty and staff members.">
     <title>Information for Staff | Cantor College</title>
-    <link rel="stylesheet" href="styles/mobile.css">
-    <link rel="stylesheet" href="styles/desktop.css">
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload Critical LCP Image with Priority -->
+    <link rel="preload" as="image" href="website-images-assets/Cantor atrium 4.jpg" fetchpriority="high" type="image/jpeg">
+    
+    <!-- CSS Loading with Performance Optimization -->
+    <link rel="stylesheet" href="styles/mobile.css" media="all">
+    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)">
 </head>
 <body>
     <header>
@@ -32,7 +41,15 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="website-images-assets/Cantor atrium 4.jpg" alt="Professional staff environment at Cantor College" class="hero-bg" width="800" height="300" loading="eager" decoding="async">
+        <img src="website-images-assets/Cantor atrium 4.jpg" 
+             alt="Professional staff environment at Cantor College" 
+             class="hero-bg" 
+             width="800" 
+             height="300" 
+             loading="eager" 
+             decoding="sync"
+             fetchpriority="high"
+             sizes="100vw">
         <div class="hero-content">
             <h1>Information for Staff</h1>
             <p>Supporting our dedicated faculty and staff with comprehensive resources and services</p>
@@ -44,7 +61,14 @@
             <h2>Latest News</h2>
             <div class="news-content">
                 <div class="news-image">
-                    <img src="website-images-assets/IMG_1005.jpeg" alt="Software Engineering awards ceremony" class="news-img">
+                    <img src="website-images-assets/IMG_1005.jpeg" 
+                         alt="Software Engineering awards ceremony" 
+                         class="news-img"
+                         width="400"
+                         height="300"
+                         loading="lazy"
+                         decoding="async"
+                         sizes="(max-width: 768px) 100vw, 400px">
                 </div>
                 <div class="news-text">
                     <h3>Software Engineering Student Awards</h3>
@@ -60,7 +84,14 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="website-images-assets/IMG_1087.jpeg" alt="Academic registry services" class="service-image">
+                        <img src="website-images-assets/IMG_1087.jpeg" 
+                             alt="Academic registry services" 
+                             class="service-image"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="service-content">
                         <h3>Academic Registry</h3>
@@ -70,7 +101,14 @@
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="website-images-assets/IMG_1089.jpeg" alt="Catering services facility" class="service-image">
+                        <img src="website-images-assets/IMG_1089.jpeg" 
+                             alt="Catering services facility" 
+                             class="service-image"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="service-content">
                         <h3>Catering Services</h3>
@@ -80,7 +118,14 @@
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="website-images-assets/IMG_1099.jpeg" alt="Financial services office" class="service-image">
+                        <img src="website-images-assets/IMG_1099.jpeg" 
+                             alt="Financial services office" 
+                             class="service-image"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="service-content">
                         <h3>Financial Services</h3>
@@ -90,7 +135,14 @@
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="website-images-assets/DSCF5127.jpg" alt="Information systems and technology" class="service-image">
+                        <img src="website-images-assets/DSCF5127.jpg" 
+                             alt="Information systems and technology" 
+                             class="service-image"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="service-content">
                         <h3>Information Systems Services</h3>
@@ -100,7 +152,14 @@
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="website-images-assets/IMG_1642.jpeg" alt="Marketing and communications" class="service-image">
+                        <img src="website-images-assets/IMG_1642.jpeg" 
+                             alt="Marketing and communications" 
+                             class="service-image"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="service-content">
                         <h3>Marketing Services</h3>
@@ -110,7 +169,14 @@
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="website-images-assets/IMG_1808.jpeg" alt="Personnel and HR services" class="service-image">
+                        <img src="website-images-assets/IMG_1808.jpeg" 
+                             alt="Personnel and HR services" 
+                             class="service-image"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="service-content">
                         <h3>Personnel Services</h3>
@@ -120,7 +186,14 @@
 
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="website-images-assets/IMG_1809.jpeg" alt="Facilities management" class="service-image">
+                        <img src="website-images-assets/IMG_1809.jpeg" 
+                             alt="Facilities management" 
+                             class="service-image"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="service-content">
                         <h3>Facilities Management</h3>
@@ -134,7 +207,14 @@
             <h2>Staff Resources</h2>
             <div class="resources-content">
                 <div class="resource-image">
-                    <img src="website-images-assets/CantorLectureTheatre5.JPG" alt="Professional development and training" class="resource-img">
+                    <img src="website-images-assets/CantorLectureTheatre5.JPG" 
+                         alt="Professional development and training" 
+                         class="resource-img"
+                         width="400"
+                         height="300"
+                         loading="lazy"
+                         decoding="async"
+                         sizes="(max-width: 768px) 100vw, 400px">
                 </div>
                 <div class="resource-text">
                     <h3>Professional Development</h3>

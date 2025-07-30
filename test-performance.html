@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Test - Cantor College</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 2rem;
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-link {
+            display: inline-block;
+            background: #003366;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 0.5rem;
+            transition: background 0.3s ease;
+        }
+        .test-link:hover {
+            background: #004080;
+        }
+        .instructions {
+            background: #e7f3ff;
+            padding: 1rem;
+            border-left: 4px solid #0066cc;
+            margin: 1rem 0;
+        }
+        .performance-tip {
+            background: #f0f9ff;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Performance Testing - Cantor College</h1>
+        
+        <div class="instructions">
+            <h3>How to Test LCP Performance:</h3>
+            <ol>
+                <li>Open Chrome DevTools (F12)</li>
+                <li>Go to the <strong>Lighthouse</strong> tab</li>
+                <li>Click "Analyze page load" for Performance audit</li>
+                <li>Or check the <strong>Console</strong> for LCP measurements</li>
+            </ol>
+        </div>
+
+        <h2>Test Pages:</h2>
+        
+        <a href="staff-info.html" class="test-link">
+            📊 Staff Info Page (Optimised - 2.4s target)
+        </a>
+        
+        <a href="student-info.html" class="test-link">
+            🎓 Student Info Page (Fixed from 58.3s)
+        </a>
+        
+        <a href="facilities.html" class="test-link">
+            🏢 Facilities Page (Fix needed - 56.0s)
+        </a>
+        
+        <a href="resources.html" class="test-link">
+            📚 Resources Page (Fix needed - 55.3s)
+        </a>
+        
+        <a href="business.html" class="test-link">
+            💼 Business Page (Fix needed - 29.6s)
+        </a>
+        
+        <a href="contact-us.html" class="test-link">
+            📞 Contact Page (✅ Good - 2.4s)
+        </a>
+        
+        <div class="performance-tip">
+            <h3>✅ Optimizations Applied:</h3>
+            <ul>
+                <li><strong>Image Preloading:</strong> Hero image loads with high priority</li>
+                <li><strong>Lazy Loading:</strong> Below-the-fold images load when needed</li>
+                <li><strong>CSS Optimization:</strong> Separate CSS files with media queries</li>
+                <li><strong>Performance Monitoring:</strong> Real-time LCP tracking in console</li>
+                <li><strong>Resource Hints:</strong> DNS prefetch and preconnect for faster loading</li>
+            </ul>
+        </div>
+
+        <div class="performance-tip">
+            <h3>📈 Expected Results:</h3>
+            <ul>
+                <li><strong>LCP Target:</strong> Under 2.5 seconds (Good)</li>
+                <li><strong>Previous:</strong> 49,660ms → 3,530ms → Target: <2,500ms</li>
+                <li><strong>Check Console:</strong> Look for "LCP: Xms" messages</li>
+            </ul>
+        </div>
+
+        <h3>🔧 Performance Monitoring:</h3>
+        <p>The staff-info.html page includes a performance monitoring script that will log the LCP time to the browser console. Open DevTools Console to see the results!</p>
+        
+        <div class="instructions">
+            <p><strong>Note:</strong> For the most accurate testing, ensure you have a stable internet connection and test in an incognito window to avoid cached resources affecting the results.</p>
+        </div>
+    </div>
+</body>
+</html>

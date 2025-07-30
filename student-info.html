@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Student life at Cantor College - explore our world-class facilities, academic support services, campus housing, career development, and student resources for computing and design students.">
     <title>Information for Students | Cantor College</title>
-    <link rel="stylesheet" href="styles/mobile.css">
-    <link rel="stylesheet" href="styles/desktop.css">
+    
+    <!-- Resource Hints for Performance -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical Resource Preloading -->
+    <link rel="preload" as="image" href="website-images-assets/IMG_1318.jpeg" fetchpriority="high" type="image/jpeg">
+    <link rel="preload" href="styles/mobile.css" as="style">
+    <link rel="preload" href="styles/desktop.css" as="style">
+    
+    <!-- CSS Loading with Performance Optimisation -->
+    <link rel="stylesheet" href="styles/mobile.css" media="all">
+    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)">
 </head>
 <body>
     <header>
@@ -32,7 +43,15 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="website-images-assets/IMG_1318.jpeg" alt="Students studying in modern learning environment" class="hero-bg" width="800" height="300" loading="eager" decoding="async">
+        <img src="website-images-assets/IMG_1318.jpeg" 
+             alt="Students studying in modern learning environment" 
+             class="hero-bg" 
+             width="800" 
+             height="300" 
+             loading="eager" 
+             decoding="sync"
+             fetchpriority="high"
+             sizes="100vw">
         <div class="hero-content">
             <h1>Information for Students</h1>
             <p>Your guide to making the most of your Cantor College experience</p>
@@ -48,8 +67,16 @@
                         At Cantor College, we are committed to providing our students with the best possible environment to learn, create, and innovate. Our state-of-the-art facilities are designed to support your academic journey and help you thrive in your chosen field. Whether you're studying computing, design, or technology, our campus offers everything you need to excel.
                     </p>
                 </div>
-                <div class="intro-image">
-                    <img src="website-images-assets/IMG_1298.jpeg" alt="Students collaborating in modern study space" class="student-image">
+                                <div class="intro-image">
+                    <img src="website-images-assets/IMG_1298.jpeg" 
+                         alt="Students collaborating in modern study space" 
+                         class="student-image"
+                         width="400"
+                         height="300"
+                         loading="lazy"
+                         decoding="async"
+                         fetchpriority="low"
+                         sizes="(max-width: 768px) 100vw, 400px">
                 </div>
             </div>
         </section>
@@ -59,7 +86,14 @@
             <div class="facilities-grid">
                 <div class="facility-item">
                     <div class="facility-image">
-                        <img src="website-images-assets/ACES-036-Computing-Playstation-Lab-2.jpg" alt="Advanced computing laboratory" class="facility-img">
+                        <img src="website-images-assets/ACES-036-Computing-Playstation-Lab-2.jpg" 
+                             alt="Advanced computing laboratory" 
+                             class="facility-img"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="facility-content">
                         <h3>1. Advanced Computing Labs</h3>
@@ -69,7 +103,15 @@
 
                 <div class="facility-item">
                     <div class="facility-image">
-                        <img src="website-images-assets/IMG_1437.jpeg" alt="Creative design studio" class="facility-img">
+                        <img src="website-images-assets/IMG_1437.jpeg" 
+                             alt="Creative design studio" 
+                             class="facility-img"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             fetchpriority="low"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="facility-content">
                         <h3>2. Design Studios</h3>
@@ -79,7 +121,15 @@
 
                 <div class="facility-item">
                     <div class="facility-image">
-                        <img src="website-images-assets/IMG_1441.jpeg" alt="Innovation and makerspace" class="facility-img">
+                        <img src="website-images-assets/IMG_1441.jpeg" 
+                             alt="Innovation and makerspace" 
+                             class="facility-img"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             fetchpriority="low"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="facility-content">
                         <h3>3. Innovation and Makerspace</h3>
@@ -89,7 +139,14 @@
 
                 <div class="facility-item">
                     <div class="facility-image">
-                        <img src="website-images-assets/IMG_1439.jpeg" alt="Technology sandbox with VR equipment" class="facility-img">
+                        <img src="website-images-assets/IMG_1439.jpeg" 
+                             alt="Technology sandbox with VR equipment" 
+                             class="facility-img"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="facility-content">
                         <h3>4. Technology Sandbox</h3>
@@ -99,7 +156,14 @@
 
                 <div class="facility-item">
                     <div class="facility-image">
-                        <img src="website-images-assets/CantorLectureTheatre11.jpg" alt="Collaborative learning space" class="facility-img">
+                        <img src="website-images-assets/CantorLectureTheatre11.jpg" 
+                             alt="Collaborative learning space" 
+                             class="facility-img"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="facility-content">
                         <h3>5. Collaborative Learning Spaces</h3>
@@ -109,7 +173,14 @@
 
                 <div class="facility-item">
                     <div class="facility-image">
-                        <img src="website-images-assets/IMG_0170.jpeg" alt="Library and resource centre" class="facility-img">
+                        <img src="website-images-assets/IMG_0170.jpeg" 
+                             alt="Library and resource centre" 
+                             class="facility-img"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="facility-content">
                         <h3>6. Library and Resource Centre</h3>
@@ -124,7 +195,14 @@
             <div class="life-grid">
                 <div class="life-item">
                     <div class="life-image">
-                        <img src="website-images-assets/Cantor atrium 3.jpg" alt="Student hub and social area" class="life-img">
+                        <img src="website-images-assets/Cantor atrium 3.jpg" 
+                             alt="Student hub and social area" 
+                             class="life-img"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="life-content">
                         <h3>Student Hub</h3>
@@ -134,31 +212,52 @@
 
                 <div class="life-item">
                     <div class="life-image">
-                        <img src="website-images-assets/IMG_0523.jpeg" alt="Career development centre" class="life-img">
+                        <img src="website-images-assets/IMG_0523.jpeg" 
+                             alt="Career development centre" 
+                             class="life-img"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="life-content">
                         <h3>Career and Development Centre</h3>
-                        <p>Our Career and Development Centre is dedicated to helping you plan your future. Offering career counseling, resume workshops, and job placement services, this centre provides the support you need to transition from student to professional.</p>
+                        <p>Our Career and Development Centre is dedicated to helping you plan your future. Offering career counselling, resume workshops, and job placement services, this centre provides the support you need to transition from student to professional.</p>
                     </div>
                 </div>
 
                 <div class="life-item">
                     <div class="life-image">
-                        <img src="website-images-assets/IMG_1642.jpeg" alt="Fitness and wellness centre" class="life-img">
+                        <img src="website-images-assets/IMG_1642.jpeg" 
+                             alt="Fitness and wellness centre" 
+                             class="life-img"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="life-content">
                         <h3>Fitness and Wellness Centre</h3>
-                        <p>We believe in nurturing both the mind and body. Our Fitness and Wellness Centre offers a fully equipped gym, exercise studios, and a range of fitness classes to help you stay healthy and active. The centre also includes wellness services such as yoga, meditation, and counseling.</p>
+                        <p>We believe in nurturing both the mind and body. Our Fitness and Wellness Centre offers a fully equipped gym, exercise studios, and a range of fitness classes to help you stay healthy and active. The centre also includes wellness services such as yoga, meditation, and counselling.</p>
                     </div>
                 </div>
 
                 <div class="life-item">
                     <div class="life-image">
-                        <img src="website-images-assets/IMG_1808.jpeg" alt="On-campus housing" class="life-img">
+                        <img src="website-images-assets/IMG_1808.jpeg" 
+                             alt="On-campus housing" 
+                             class="life-img"
+                             width="300"
+                             height="200"
+                             loading="lazy"
+                             decoding="async"
+                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 300px">
                     </div>
                     <div class="life-content">
                         <h3>On-Campus Housing</h3>
-                        <p>For those who choose to live on campus, Cantor College offers modern, comfortable housing options. Our residence halls provide a supportive community environment, with amenities like high-speed internet, study lounges, and common areas where you can relax and socialize.</p>
+                        <p>For those who choose to live on campus, Cantor College offers modern, comfortable housing options. Our residence halls provide a supportive community environment, with amenities like high-speed internet, study lounges, and common areas where you can relax and socialise.</p>
                     </div>
                 </div>
             </div>
@@ -182,7 +281,14 @@
                     </ul>
                 </div>
                 <div class="support-image">
-                    <img src="website-images-assets/CantorLectureTheatre4.JPG" alt="Academic support and tutoring" class="support-img">
+                    <img src="website-images-assets/CantorLectureTheatre4.JPG" 
+                         alt="Academic support and tutoring" 
+                         class="support-img"
+                         width="400"
+                         height="300"
+                         loading="lazy"
+                         decoding="async"
+                         sizes="(max-width: 768px) 100vw, 400px">
                 </div>
             </div>
         </section>
@@ -200,6 +306,6 @@
         <p>&copy; 2024 Cantor College. All rights reserved.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="styles/desktop.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Rest of body content -->
     <header>
         <nav role="navigation" aria-label="Main navigation">
             <div class="logo">
@@ -39,7 +41,7 @@
         </div>
     </section>
 
-    <main>
+    <main id="main-content">
         <!-- Contact Information Section -->
         <section class="contact-info-section">
             <h2>Get in Touch</h2>
@@ -89,58 +91,76 @@
                 <p>Have a question or need more information? Fill out the form below and we'll get back to you as soon as possible.</p>
             </div>
             
-            <form class="contact-form" action="#" method="post">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="first-name">First Name *</label>
-                        <input type="text" id="first-name" name="first-name" required>
+            <form class="contact-form" action="#" method="post" aria-labelledby="contact-form-heading">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name <span aria-label="required">*</span></label>
+                            <input type="text" id="first-name" name="first-name" required aria-describedby="first-name-help">
+                            <div id="first-name-help" class="sr-only">Enter your first name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name <span aria-label="required">*</span></label>
+                            <input type="text" id="last-name" name="last-name" required aria-describedby="last-name-help">
+                            <div id="last-name-help" class="sr-only">Enter your last name</div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name *</label>
-                        <input type="text" id="last-name" name="last-name" required>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address <span aria-label="required">*</span></label>
+                            <input type="email" id="email" name="email" required aria-describedby="email-help">
+                            <div id="email-help" class="sr-only">Enter a valid email address</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" aria-describedby="phone-help">
+                            <div id="phone-help" class="sr-only">Enter your phone number (optional)</div>
+                        </div>
                     </div>
-                </div>
+                </fieldset>
                 
-                <div class="form-row">
+                <fieldset>
+                    <legend>Enquiry Details</legend>
                     <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="enquiry-type">Enquiry Type</label>
+                        <select id="enquiry-type" name="enquiry-type" aria-describedby="enquiry-help">
+                            <option value="">Please select...</option>
+                            <option value="general">General Information</option>
+                            <option value="admissions">Course Admissions</option>
+                            <option value="business">Business Partnerships</option>
+                            <option value="facilities">Facilities Booking</option>
+                            <option value="support">Student Support</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div id="enquiry-help" class="sr-only">Select the type of enquiry (optional)</div>
                     </div>
+                    
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
+                        <label for="subject">Subject <span aria-label="required">*</span></label>
+                        <input type="text" id="subject" name="subject" required aria-describedby="subject-help">
+                        <div id="subject-help" class="sr-only">Enter the subject of your enquiry</div>
                     </div>
-                </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message <span aria-label="required">*</span></label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your enquiry..." aria-describedby="message-help"></textarea>
+                        <div id="message-help" class="sr-only">Enter your detailed message or enquiry</div>
+                    </div>
+                </fieldset>
                 
-                <div class="form-group">
-                    <label for="enquiry-type">Enquiry Type</label>
-                    <select id="enquiry-type" name="enquiry-type">
-                        <option value="">Please select...</option>
-                        <option value="general">General Information</option>
-                        <option value="admissions">Course Admissions</option>
-                        <option value="business">Business Partnerships</option>
-                        <option value="facilities">Facilities Booking</option>
-                        <option value="support">Student Support</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" aria-describedby="newsletter-help">
+                        <label for="newsletter">I would like to receive updates about courses and events</label>
+                        <div id="newsletter-help" class="sr-only">Optional: Check to receive college updates</div>
+                    </div>
+                </fieldset>
                 
-                <div class="form-group">
-                    <label for="subject">Subject *</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your enquiry..."></textarea>
-                </div>
-                
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" id="newsletter" name="newsletter">
-                    <label for="newsletter">I would like to receive updates about courses and events</label>
-                </div>
-                
-                <button type="submit" class="submit-button">Send Message</button>
+                <button type="submit" class="submit-button" aria-describedby="submit-help">Send Message</button>
+                <div id="submit-help" class="sr-only">Submit your contact form to send your message</div>
             </form>
         </section>
 

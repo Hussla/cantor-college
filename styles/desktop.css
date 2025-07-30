@@ -506,3 +506,62 @@
         box-shadow: none;
     }
 }
+
+/* Desktop Accessibility improveemnts */
+@media (min-width: 768px) {
+    /* Better skip link positioning for desktop */
+    .skip-link:focus {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 10001;
+    }
+    
+    /* Form layout improvements for desktop */
+    .form-row {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    .form-row .form-group {
+        flex: 1;
+    }
+    
+    /* Enhanced fieldset styling for larger screens */
+    fieldset {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    legend {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+    
+    /* Better focus indicators for desktop */
+    input:focus,
+    textarea:focus,
+    select:focus,
+    button:focus {
+        outline: 3px solid #004080;
+        outline-offset: 3px;
+    }
+    
+    /* Image Performance Optimisations */
+    .hero-bg,
+    .service-image,
+    .news-img,
+    .resource-img {
+        content-visibility: auto;
+        contain-intrinsic-size: 300px 200px;
+    }
+    
+    .hero-bg {
+        contain-intrinsic-size: 800px 300px;
+    }
+    
+    .news-img,
+    .resource-img {
+        contain-intrinsic-size: 400px 300px;
+    }
+}

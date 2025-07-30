@@ -54,15 +54,89 @@
         });
     }
 
-    // Initialize when DOM is ready
+    // Initialise when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
+            // Critical functionality first
             initBurgerMenu();
-            // Delay slideshow to reduce initial blocking
-            setTimeout(initSlideshow, 200);
+            
+            // Defer non-critical functionality to avoid blocking LCP
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(function() {
+                    initSlideshow();
+                    initPerformanceMonitoring();
+                    initAdvancedImageLoading();
+                }, { timeout: 1000 });
+            } else {
+                // Fallback for browsers without requestIdleCallback
+                setTimeout(function() {
+                    initSlideshow();
+                    initPerformanceMonitoring();
+                    initAdvancedImageLoading();
+                }, 100);
+            }
         });
     } else {
+        // Critical functionality first
         initBurgerMenu();
-        setTimeout(initSlideshow, 200);
+        
+        // Defer non-critical functionality
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(function() {
+                initSlideshow();
+                initPerformanceMonitoring();
+                initAdvancedImageLoading();
+            }, { timeout: 1000 });
+        } else {
+            // Fallback for browsers without requestIdleCallback
+            setTimeout(function() {
+                initSlideshow();
+                initPerformanceMonitoring();
+                initAdvancedImageLoading();
+            }, 100);
+        }
+    }
+
+    // Performance Monitoring - LCP Tracking
+    function initPerformanceMonitoring() {
+        if ('PerformanceObserver' in window) {
+            const observer = new PerformanceObserver((list) => {
+                for (const entry of list.getEntries()) {
+                    if (entry.entryType === 'largest-contentful-paint') {
+                        console.log('LCP:', Math.round(entry.startTime), 'ms');
+                        if (entry.startTime > 2500) {
+                            console.warn('LCP is above 2.5s threshold');
+                        } else {
+                            console.log('✅ LCP is within good range');
+                        }
+                    }
+                }
+            });
+            observer.observe({entryTypes: ['largest-contentful-paint']});
+        }
+    }
+
+    // Advanced Image Loading Optimisation
+    function initAdvancedImageLoading() {
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        // Only load when about to come into view
+                        if (!img.src && img.dataset.src) {
+                            img.src = img.dataset.src;
+                        }
+                        observer.unobserve(img);
+                    }
+                });
+            }, {
+                rootMargin: '50px 0px' // Load 50px before coming into view
+            });
+
+            lazyImages.forEach(img => imageObserver.observe(img));
+        }
     }
 })();
