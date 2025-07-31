@@ -11,9 +11,9 @@ A comprehensive web development project featuring a static HTML website and dyna
 ```bash
 git clone https://github.com/Hussla/cantor-college.git
 cd cantor-college/website_code
-python3 -m http.server 8000
+python3 -m http.server 9000
 ```
-**Access:** http://localhost:8000/components/homepage.html
+**Access:** http://localhost:9000
 
 ### Next.js Application
 ```bash
@@ -28,9 +28,20 @@ npm run dev
 ```
 cantor-college/
 ├── website_code/              # Static HTML website
-│   ├── components/            # HTML pages (homepage.html, courses.html, etc.)
-│   ├── styles/               # CSS files (mobile.css, desktop.css)
-│   ├── js/                   # JavaScript (main.js)
+│   ├── index.html            # Main homepage (root level)
+│   ├── components/           # Additional HTML pages
+│   │   ├── courses.html      # Courses information page
+│   │   ├── facilities.html   # Campus facilities page
+│   │   ├── resources.html    # Learning resources page
+│   │   ├── staff-info.html   # Staff information page
+│   │   ├── student-info.html # Student information page
+│   │   ├── business.html     # Working with business page
+│   │   └── contact-us.html   # Contact information page
+│   ├── styles/               # CSS stylesheets
+│   │   ├── mobile.css        # Mobile-first responsive styles
+│   │   └── desktop.css       # Desktop-specific styles
+│   ├── js/                   # JavaScript functionality
+│   │   └── main.js          # Interactive features and slideshow
 │   └── used-images/          # Optimised image assets
 ├── pages/                    # Next.js pages and API routes
 │   ├── courses.js           # Dynamic courses page
@@ -67,7 +78,7 @@ cantor-college/
 
 ```bash
 # Static website
-cd website_code && python3 -m http.server 8000
+cd website_code && python3 -m http.server 9000
 
 # Next.js development
 npm run dev
@@ -94,11 +105,3 @@ curl http://localhost:3000/api/courses
 ---
 
 For detailed documentation see `references.md`
-
-
-
-
-
-
-
-

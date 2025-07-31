@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cantor College - Specializing in Computing and Design education since 1989. Explore our undergraduate and postgraduate courses in computer science, software engineering, cyber security, and creative design in Sheffield.">
+    <meta name="description" content="Cantor College - Specialising in Computing and Design education since 1989. Explore our undergraduate and postgraduate courses in computer science, software engineering, cyber security, and creative design in Sheffield.">
     <title>Cantor College</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
-
-
+    
+    <!-- Critical resource preloading for performance -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
     
-  
-    <link rel="preload" href="../../website-images-assets/IMG_0523.jpeg" as="image" fetchpriority="high" type="image/jpeg">
-    <link rel="preload" href="../../styles/mobile.css" as="style">
-    <link rel="preload" href="../../styles/desktop.css" as="style">
+    <!-- Critical resources preload -->
+    <link rel="preload" href="used-images/IMG_0523.jpeg" as="image" fetchpriority="high" type="image/jpeg">
+    <link rel="preload" href="styles/mobile.css" as="style">
+    <link rel="preload" href="styles/desktop.css" as="style">
     
-
-    <link rel="stylesheet" href="../../styles/mobile.css" media="all">
-    <link rel="stylesheet" href="../../styles/desktop.css" media="screen and (min-width: 768px)">
+    <!-- CSS with media queries for performance -->
+    <link rel="stylesheet" href="styles/mobile.css" media="all">
+    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)">
 </head>
 <body>
     <!-- Skip to main content link for accessibility -->
@@ -28,20 +28,20 @@
     <header>
         <nav role="navigation" aria-label="Main navigation">
             <div class="logo">
-                <img src="../../website-images-assets/resized-logo.png" alt="Cantor College Logo">
+                <img src="used-images/resized-logo.png" alt="Cantor College Logo">
             </div>
             <div id="burger-menu">
                 <button id="burger-button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
             </div>
             <ul class="nav-links" role="menubar">
-                <li role="none"><a href="homepage.html" role="menuitem" aria-current="page">Home</a></li>
-                <li role="none"><a href="courses.html" role="menuitem">Courses</a></li>
-                <li role="none"><a href="facilities.html" role="menuitem">Facilities</a></li>
-                <li role="none"><a href="resources.html" role="menuitem">Learning Resources</a></li>
-                <li role="none"><a href="staff-info.html" role="menuitem">Staff</a></li>
-                <li role="none"><a href="student-info.html" role="menuitem">Students</a></li>
-                <li role="none"><a href="business.html" role="menuitem">Working with Business</a></li>
-                <li role="none"><a href="contact-us.html" role="menuitem">Contact Us</a></li>
+                <li role="none"><a href="index.html" role="menuitem" aria-current="page">Home</a></li>
+                <li role="none"><a href="components/courses.html" role="menuitem">Courses</a></li>
+                <li role="none"><a href="components/facilities.html" role="menuitem">Facilities</a></li>
+                <li role="none"><a href="components/resources.html" role="menuitem">Learning Resources</a></li>
+                <li role="none"><a href="components/staff-info.html" role="menuitem">Staff</a></li>
+                <li role="none"><a href="components/student-info.html" role="menuitem">Students</a></li>
+                <li role="none"><a href="components/business.html" role="menuitem">Working with Business</a></li>
+                <li role="none"><a href="components/contact-us.html" role="menuitem">Contact Us</a></li>
             </ul>
         </nav>
     </header>
@@ -49,7 +49,7 @@
     <main id="main-content">
         <!-- Hero Section -->
         <section id="home" class="hero">
-        <img src="../../website-images-assets/IMG_0523.jpeg" 
+        <img src="used-images/IMG_0523.jpeg" 
              alt="Cantor College campus building with modern architecture" 
              class="hero-bg" 
              width="800" 
@@ -61,7 +61,7 @@
         <div class="hero-content">
             <h1>Welcome to Cantor College</h1>
             <p>Your future begins here. Explore our diverse range of courses and be part of an inspiring community.</p>
-            <a href="contact-us.html" class="cta-button">Apply Now</a>
+            <a href="components/contact-us.html" class="cta-button">Apply Now</a>
         </div>
     </section>
 
@@ -69,13 +69,13 @@
     <section id="image-rotator" class="image-rotator" aria-label="Campus image slideshow">
         <div class="slideshow-container">
             <div class="slide fade">
-                <img src="../../website-images-assets/ACES-032-Computing-Playstation-Lab.jpg" alt="Computing lab with PlayStation equipment for gaming development courses" class="slideshow-image" width="800" height="300" loading="lazy" decoding="async">
+                <img src="used-images/ACES-032-Computing-Playstation-Lab.jpg" alt="Computing lab with PlayStation equipment for gaming development courses" class="slideshow-image" width="800" height="300" loading="lazy" decoding="async">
             </div>
             <div class="slide fade">
-                <img src="../../website-images-assets/Cantor atrium 3.jpg" alt="Modern college atrium with students socializing" class="slideshow-image" width="800" height="300" loading="lazy" decoding="async">
+                <img src="used-images/Cantor atrium 3.jpg" alt="Modern college atrium with students socializing" class="slideshow-image" width="800" height="300" loading="lazy" decoding="async">
             </div>
             <div class="slide fade">
-                <img src="../../website-images-assets/IMG_1298.jpeg" alt="Students collaborating in modern learning space" class="slideshow-image" width="800" height="300" loading="lazy" decoding="async">
+                <img src="used-images/IMG_1298.jpeg" alt="Students collaborating in modern learning space" class="slideshow-image" width="800" height="300" loading="lazy" decoding="async">
             </div>
         </div>
         <div class="slideshow-indicators">
@@ -183,6 +183,6 @@
         <p>&copy; 2024 Cantor College. All rights reserved.</p>
     </footer>
 
-    <script src="../../js/main.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

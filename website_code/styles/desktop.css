@@ -564,4 +564,19 @@
     .resource-img {
         contain-intrinsic-size: 400px 300px;
     }
+    
+    /* Application Section Desktop */
+    .application-content {
+        flex-direction: row;
+        gap: 3rem;
+    }
+    
+    .application-steps,
+    .application-support {
+        flex: 1;
+    }
+    
+    .application-section {
+        padding: 5rem 3rem;
+    }
 }
