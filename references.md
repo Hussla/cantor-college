@@ -2,15 +2,15 @@
 
 ## Project Overview
 
-This project consists of a static HTML website for Cantor College with a companion Next.js application featuring dynamic course management. The website implements web standards with responsive design, accessibility features, and performance optimisations.
+This project comprises a static HTML website for Cantor College with a companion Next.js application featuring dynamic course management. The website implements web standards with responsive design, accessibility features, and performance optimisations.
 
 ---
 
 ## Main Project Files Analysis
 
-### HTML Files
+### HTML Files (located in `website_code/components/`)
 
-#### 1. `index.html` - Homepage
+#### 1. `homepage.html` - Homepage (formerly index.html)
 **Function:** Main landing page for Cantor College website
 - **Key Features:**
   - Hero section with background image and call-to-action
@@ -25,50 +25,58 @@ This project consists of a static HTML website for Cantor College with a compani
   - Form elements with validation attributes
   - Image optimisation attributes (`loading="lazy"`, `decoding="async"`)
   - Meta tags for SEO and viewport configuration
+- **File Location:** `website_code/components/homepage.html`
 
 #### 2. `courses.html` - Course Information
-**Function:** Displays detailed course information for Computing and Design programs
+**Function:** Displays detailed course information for Computing and Design programmes
 - Static course listings with descriptions
 - Course categories and requirements
 - Academic pathways and career outcomes
+- **File Location:** `website_code/components/courses.html`
 
 #### 3. `facilities.html` - Campus Facilities
-**Function:** Showcases college facilities and infrastructure
+**Function:** Presents college facilities and infrastructure
 - Facility galleries
-- Lab descriptions
+- Laboratory descriptions
 - Campus amenities overview
+- **File Location:** `website_code/components/facilities.html`
 
 #### 4. `resources.html` - Learning Resources
 **Function:** Information about library and digital resources
 - Library services and access
 - Digital databases and tools
 - Study spaces and support services
+- **File Location:** `website_code/components/resources.html`
 
 #### 5. `staff-info.html` - Staff Information
 **Function:** Staff profiles and contact information
 - Faculty directories
 - Department contacts
 - Office hours and availability
+- **File Location:** `website_code/components/staff-info.html`
 
 #### 6. `student-info.html` - Student Services
 **Function:** Student support services and campus life
 - Student services overview
-- Campus housing information
+- Campus accommodation information
 - Student activities and societies
+- **File Location:** `website_code/components/student-info.html`
 
 #### 7. `business.html` - Business Partnerships
 **Function:** Information for business collaboration
 - Partnership opportunities
 - Services
 - Industry connections
+- **File Location:** `website_code/components/business.html`
 
 #### 8. `contact-us.html` - Contact Information
 **Function:** Contact forms and location details
 - Contact methods
 - Contact forms
 - Campus location and directions
+- **File Location:** `website_code/components/contact-us.html`
 
-### CSS Files
+### CSS Files (located in `styles/`)
 
 #### 1. `styles/mobile.css` - Mobile-First Responsive Styles
 **Function:** Primary stylesheet implementing mobile-first responsive design
@@ -143,12 +151,19 @@ This project consists of a static HTML website for Cantor College with a compani
 - Dynamic course table generation
 - Responsive table design
 
-#### 4. `cantor-college-nextjs/db.js` - Database Connection
+#### 4. `database/db.js` - Database Connection
 **Function:** MySQL database configuration and connection
 - MySQL2 library implementation
 - Connection pooling
 - Error handling
 - Database query examples
+
+#### 5. `database/courseinfo.sql` - Course Data SQL Script
+**Function:** Complete SQL script with all 24 courses from Excel data
+- Database schema creation
+- All 24 courses with complete data
+- Course statistics and verification queries
+- Proper SQL formatting and comments
 
 #### 5. `cantor-college-nextjs/package.json` - Project Configuration
 **Function:** Node.js project configuration
@@ -172,7 +187,7 @@ This project consists of a static HTML website for Cantor College with a compani
   - Response validation and error catching
   - API performance logging (sub-200ms response times)
 
-#### 2. `cantor-college-nextjs/db.js` - Database Connection
+#### 2. `database/db.js` - Database Connection
 **Function:** MySQL database connection configuration
 - **Key Features:**
   - MySQL2 driver configuration
@@ -187,73 +202,154 @@ This project consists of a static HTML website for Cantor College with a compani
 
 ---
 
+## Image Assets & Media Organisation
+
+### Image Asset Management
+All project images are organised within the `website_code/used-images/` directory for optimal asset management and performance.
+
+#### Image Directory Structure
+**Location:** `website_code/used-images/`
+**Purpose:** Centralised media storage for consistent reference and optimisation
+
+#### Image Inventory & Usage Analysis
+The project contains **26 image files** totalling **48.2 MB**. All images are actively utilised across the website components:
+
+##### Campus & Facility Images (15 files)
+- **Cantor atrium 3.jpg** - Used in facilities.html for main atrium showcase
+- **Cantor atrium 4.jpg** - Secondary atrium view in facilities.html
+- **cantor-gallery.jpg** - Gallery section in resources.html
+- **Cantor4.jpg** - Campus overview in homepage.html slideshow
+- **CantorLectureTheatre11.jpg** - Lecture facilities in facilities.html
+- **CantorLectureTheatre4.JPG** - Academic spaces showcase
+- **CantorLectureTheatre5.JPG** - Theatre facilities documentation
+- **DSCF5127.jpg** - Campus environments in homepage slideshow
+- **872SHUSpaceCitymap.jpg** - Location and campus mapping in contact-us.html
+
+##### Computing Lab Images (2 files)
+- **ACES-032-Computing-Playstation-Lab.jpg** - Gaming/computing facilities in courses.html
+- **ACES-036-Computing-Playstation-Lab-2.jpg** - Extended lab view for course information
+
+##### Student Life & Facilities (9 files)
+- **IMG_0170.jpeg** through **IMG_1809.jpeg** - Student life documentation
+- Various facility and campus environment images used throughout components
+- Systematic naming convention for content management
+
+##### Branding & Identity (1 file)
+- **resized-logo.png** - Optimised college logo (PNG format for transparency)
+- Used in header navigation across all HTML components
+
+#### Image Optimisation Standards
+- **Format Guidelines:** JPEG for photography, PNG for logos/graphics with transparency
+- **Loading Strategy:** Lazy loading implemented (`loading="lazy"`) for performance
+- **Accessibility:** Alt text provided for all images following WCAG 2.2 guidelines
+- **Performance:** Images sized appropriately for web delivery
+- **File Organisation:** Centralised storage prevents duplication and maintains consistency
+
+#### Usage Implementation
+All images are referenced using relative paths from component files:
+```html
+<img src="../../used-images/[filename]" alt="descriptive text" loading="lazy">
+```
+
+#### Asset Efficiency Analysis
+- **100% Asset Utilisation:** All 26 images in the directory are actively used
+- **No Redundant Files:** Clean asset management with no unused media
+- **Optimised References:** Consistent relative pathing from components directory
+- **Performance Conscious:** Lazy loading and appropriate file formats implemented
+
+---
+
 ## HTML Documentation References
 
 ### Core HTML Elements
 - **HTML5 Semantic Elements:** https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+- **HTML Living Standard:** https://html.spec.whatwg.org/
 - **HTML Document Structure:** https://html.spec.whatwg.org/multipage/dom.html#documents
 - **HTML Forms:** https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
 - **HTML Accessibility:** https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+- **HTML Best Practices:** https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML
 
-### Specific HTML Features Used
+### HTML Features Used in Project
 - **Meta Tags:** https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 - **Link Preloading:** https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/preload
 - **Image Optimisation:** https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#loading
+- **Responsive Images:** https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
 - **Form Validation:** https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
 - **ARIA Roles:** https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
+- **ARIA Properties:** https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes
 - **Semantic HTML:** https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantic_elements
+- **HTML Performance:** https://developer.mozilla.org/en-US/docs/Learn/Performance/HTML
+- **Resource Hints:** https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#resource_hints
 
 ---
 
 ## CSS Documentation References
 
 ### Core CSS Concepts
-- **CSS Specifications:** https://www.w3.org/TR/css-2023/
+- **CSS Specifications:** https://www.w3.org/TR/css-2024/
+- **CSS Working Group:** https://www.w3.org/Style/CSS/
 - **CSS Grid Layout:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
 - **CSS Flexbox:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
 - **CSS Cascade and Inheritance:** https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade
+- **CSS Selectors:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors
 
-### Responsive Design
+### Responsive Design & Layout
 - **Media Queries:** https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries
 - **Responsive Design:** https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design
+- **Container Queries:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries
 - **Viewport Meta Tag:** https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag
+- **CSS Logical Properties:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values
 
 ### Advanced CSS Features
 - **CSS Custom Properties:** https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
-- **CSS Animations:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations
-- **CSS Transitions:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions
-- **CSS Box Model:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model
+- **CSS Animations:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animations
+- **CSS Transitions:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions
+- **CSS Box Model:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model
+- **CSS Performance:** https://developer.mozilla.org/en-US/docs/Learn/Performance/CSS
+- **CSS Houdini:** https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Houdini
 
-### CSS Methodologies
+### CSS Methodologies & Architecture
 - **BEM Methodology:** https://en.bem.info/methodology/
-- **CSS Architecture:** https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organising
+- **CSS Architecture:** https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing
+- **ITCSS:** https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+- **CSS Modules:** https://github.com/css-modules/css-modules
 
 ---
 
 ## JavaScript Documentation References
 
+## JavaScript Documentation References
+
 ### Core JavaScript
 - **JavaScript Language Reference:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
-- **ECMAScript 2023:** https://tc39.es/ecma262/
+- **ECMAScript 2024:** https://tc39.es/ecma262/
 - **JavaScript Features:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+- **JavaScript Modules:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+- **JavaScript Classes:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
-### DOM Manipulation
+### DOM Manipulation & Web APIs
 - **DOM API:** https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 - **Event Handling:** https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 - **Element API:** https://developer.mozilla.org/en-US/docs/Web/API/Element
-- **Document Ready:** https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState
+- **Document API:** https://developer.mozilla.org/en-US/docs/Web/API/Document
+- **Fetch API:** https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+- **Web APIs:** https://developer.mozilla.org/en-US/docs/Web/API
 
-### Specific JavaScript Features Used
+### JavaScript Features Used in Project
 - **IIFE Pattern:** https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 - **Arrow Functions:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 - **Array Methods:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 - **String Methods:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 - **Timer Functions:** https://developer.mozilla.org/en-US/docs/Web/API/setTimeout
+- **Async/Await:** https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await
+- **Promises:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
-### JavaScript Best Practices
-- **JavaScript Best Practices:** https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Code_guidelines/JavaScript
+### JavaScript Best Practices & Performance
+- **JavaScript Best Practices:** https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 - **Error Handling:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-- **Performance:** https://developer.mozilla.org/en-US/docs/Learn/Performance
+- **JavaScript Performance:** https://developer.mozilla.org/en-US/docs/Learn/Performance
+- **Modern JavaScript:** https://javascript.info/
+- **ES6+ Features:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript
 
 ---
 
@@ -279,24 +375,33 @@ This project consists of a static HTML website for Cantor College with a compani
 
 ## Database & Backend References
 
-### MySQL
-- **MySQL Documentation:** https://dev.mysql.com/doc/
+## Database & Backend References
+
+### MySQL & SQL
+- **MySQL 8.4 Documentation:** https://dev.mysql.com/doc/refman/8.4/en/
+- **MySQL Performance Tuning:** https://dev.mysql.com/doc/refman/8.4/en/optimization.html
 - **MySQL2 Node.js Driver:** https://github.com/sidorares/node-mysql2
-- **SQL Reference:** https://dev.mysql.com/doc/refman/8.0/en/sql-statements.html
+- **SQL Reference:** https://dev.mysql.com/doc/refman/8.4/en/sql-statements.html
+- **SQL Tutorial:** https://www.w3schools.com/sql/
 - **MySQL Installation (macOS):** https://formulae.brew.sh/formula/mysql
 - **MySQL Service Management:** https://brew.sh/
+- **Database Design:** https://dev.mysql.com/doc/refman/8.4/en/designing-database.html
+- **MySQL Security:** https://dev.mysql.com/doc/refman/8.4/en/security.html
 
 ### Node.js & ES6 Modules
-- **Node.js Documentation:** https://nodejs.org/en/docs/
+- **Node.js LTS Documentation:** https://nodejs.org/en/docs/
 - **ES6 Modules:** https://nodejs.org/api/esm.html
 - **Import/Export Syntax:** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
 - **npm Documentation:** https://docs.npmjs.com/
 - **Package.json Reference:** https://docs.npmjs.com/cli/v10/configuring-npm/package-json
+- **Node.js Best Practices:** https://github.com/goldbergyoni/nodebestpractices
 
-### Database Troubleshooting
+### Database Troubleshooting & Performance
 - **Connection Issues:** https://github.com/sidorares/node-mysql2/issues
-- **API Response Problems:** https://nextjs.org/docs/api-routes/introduction
-- **Module Import Errors:** https://nodejs.org/api/esm.html#esm_differences_between_es_modules_and_commonjs
+- **API Response Problems:** https://nextjs.org/docs/pages/building-your-application/routing/api-routes
+- **Module Import Errors:** https://nodejs.org/api/esm.html#differences-between-es-modules-and-commonjs
+- **Database Connection Pooling:** https://github.com/sidorares/node-mysql2#pooling-connections
+- **SQL Injection Prevention:** https://owasp.org/www-community/attacks/SQL_Injection
 
 ---
 
@@ -304,14 +409,21 @@ This project consists of a static HTML website for Cantor College with a compani
 
 ### Web Performance
 - **Web.dev Performance:** https://web.dev/performance/
-- **Core Web Vitals:** https://web.dev/vitals/
-- **Image Optimisation:** https://web.dev/optimize-images/
-- **Critical Rendering Path:** https://developers.google.com/web/fundamentals/performance/critical-rendering-path
+- **Core Web Vitals:** https://web.dev/articles/vitals
+- **Lighthouse Performance:** https://developer.chrome.com/docs/lighthouse/performance/
+- **Image Optimisation:** https://web.dev/articles/optimize-images
+- **Critical Rendering Path:** https://web.dev/articles/critical-rendering-path
+- **Resource Hints:** https://web.dev/articles/preload-critical-assets
+- **Web Performance Metrics:** https://web.dev/articles/metrics
+- **Performance Budgets:** https://web.dev/articles/performance-budgets-101
 
 ### SEO & Accessibility
 - **SEO Fundamentals:** https://developers.google.com/search/docs/fundamentals/seo-starter-guide
-- **Web Accessibility:** https://www.w3.org/WAI/WCAG21/quickref/
+- **Web Accessibility Guidelines:** https://www.w3.org/WAI/WCAG22/quickref/
 - **ARIA Authoring Practices:** https://www.w3.org/WAI/ARIA/apg/
+- **Accessibility Testing:** https://web.dev/articles/accessibility
+- **Semantic HTML for SEO:** https://developers.google.com/search/docs/crawling-indexing/valid-html
+- **Mobile-First Indexing:** https://developers.google.com/search/mobile-sites/mobile-first-indexing
 
 ---
 
@@ -387,29 +499,6 @@ This project consists of a static HTML website for Cantor College with a compani
 - **MySQL2 Documentation:** https://www.npmjs.com/package/mysql2
 - **Node.js ES6 Modules:** https://nodejs.org/api/esm.html
 - **API Route Debugging:** https://nextjs.org/docs/api-routes/introduction
-
----
-
-## Recent Updates & Fixes
-
-### Database Connection Improvements (July 2025)
-- **Issue:** Mixed module systems causing API response failures
-- **Fix:** Converted all files to use consistent ES6 import/export syntax
-- **Files Modified:** `db.js`, `pages/api/courses.js`
-- **Result:** API response time improved to sub-200ms, eliminated "API resolved without sending a response" warnings
-
-### Performance Enhancements
-- **Database Queries:** Optimised for 24-course dataset
-- **API Endpoints:** Consistent response formatting
-- **Error Handling:** Improved logging and debugging capabilities
-- **Module Loading:** ES6 imports for better compatibility
-
-### Testing Verification
-- **Database Connection:** ✅ MySQL service running
-- **Course Data:** ✅ 24 courses imported (17 Computing, 7 Art & Design)
-- **API Functionality:** ✅ GET endpoint responding correctly
-- **Frontend Integration:** ✅ Next.js courses page displaying data
-- **Performance:** ✅ Response times under 200ms
 
 ---
 

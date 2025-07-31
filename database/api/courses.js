@@ -1,4 +1,4 @@
-import connection from '../../lib/db.js';
+import connection from '../db.js';
 
 export default function handler(req, res) {
     console.log(`API endpoint hit with method: ${req.method}`);
